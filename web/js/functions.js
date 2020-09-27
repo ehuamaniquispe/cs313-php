@@ -12,10 +12,10 @@ function changeColor() {
 
 }
 
-// jquery to change color
+
 $(document).ready(function () {
 
-
+    // change color
     $('#changeColor').click(function () {
         var color = $("#color1").val();
         console.log(color);
@@ -26,6 +26,15 @@ $(document).ready(function () {
         $("#div3").fadeToggle("slow");
 
     });
+
+    $('#introBtn').click(function () {
+        $("#intro").fadeToggle("slow");
+
+    });
+
+
+
+
 
 });
 

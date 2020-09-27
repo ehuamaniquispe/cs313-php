@@ -1,7 +1,156 @@
+/*team style*/
 .myclass{
     background-color: blue;
     font-size: 20pt;
 }
 .myclass:hover{
      font-weight:bold ;
+}
+
+img{
+    /* margin: 20px 20px 20px 0; */
+    max-width: 60%;
+    display: block;
+    margin: auto;
+}
+
+/*personal homepage style*/
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* variables */
+:root{
+    --primaryColor: #6495ED; 
+    --secondaryColor : #FAEBD7;
+    --thirdColor: #DEB887;
+
+}
+
+
+/* reset */
+
+body, p, a, ul, li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li {
+    color: var(--secondaryColor);
+    list-style-type: none;
+    padding:10px 0;
+    
+}
+
+/* base styles */
+
+body {
+    background: var(--secondaryColor);
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+
+h1 {
+    margin: 20px 0;
+    background: var(--primaryColor);
+    text-align:center;
+    
+  
+}
+
+p {
+    display:none;
+    background: white;   
+    max-width: 70%;
+    padding:40px;
+    box-shadow: 4px 4px 2px grey;
+    /* display: block; */
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    
+   
+}
+
+li a:active{
+    color:var(--thirdColor);
+
+}
+
+li a:hover{
+    color: white;
+    text-decoration: underline;
+    
+}
+
+a{
+    color: var(--primaryColor);
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin: 20px 0;
+}
+
+a:active{
+    color: var(--thirdColor);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Lora', serif;
+}
+
+#introBtn{
+    display: block;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* fonts */
+
+header *{
+    color: var(--secondaryColor);
+}
+
+
+/* mobile styles */
+.post-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+
+}
+
+
+header{
+    
+    text-align: right;
+    margin-bottom: 30px;
+    padding: 20px;
+    
+}
+
+
+/* desktop styles */
+@media screen and (min-width: 900px){
+
+    header {
+        /* float:left; */
+        width: 20%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    main {
+        width: 75%;
+        float: right;
+        
+    } 
+
 }

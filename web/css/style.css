@@ -1,0 +1,7 @@
+.myclass{
+    background-color: blue;
+    font-size: 20pt;
+}
+.myclass:hover{
+     font-weight:bold ;
+}

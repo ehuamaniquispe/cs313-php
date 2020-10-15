@@ -55,7 +55,7 @@ function scripturesInfo()
 <?php    
 // scripturesInfo();
 // var scripture = scripturesInfo();
-print_r(scripturscripturesInfo());
+print_r(scripturesInfo());
 ?>
 
 </body>

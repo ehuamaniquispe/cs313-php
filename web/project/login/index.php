@@ -27,6 +27,7 @@ switch ($action){
         //   echo ($_SESSION['userLevel']);
         $action = "default";
         header("location:../students/index.php?action=$action"); 
+        exit();
         // header("location:../students/index.php"); 
         // include'../students'; 
 

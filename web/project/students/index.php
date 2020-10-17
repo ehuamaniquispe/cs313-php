@@ -11,11 +11,11 @@
 // // require_once '../model/students-model.php';
 // // require_once '../library/functions.php';
 
-$action = filter_input(INPUT_POST, 'action');
-if ($action == NULL){
-    $action = filer_input(INPUT_GET, 'action');
-}
-
+// $action = filter_input(INPUT_POST, 'action');
+// if ($action == NULL){
+//     $action = filer_input(INPUT_GET, 'action');
+// }
+$action = $_GET["action"];
 echo($action);
 // exit;
 

@@ -1,7 +1,7 @@
 <?php session_start();
 
 require_once '../library/connection.php';
-require_once '../model/login.php';
+// require_once '../model/login.php';
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){

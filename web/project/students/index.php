@@ -1,6 +1,6 @@
 <?php session_start();
 
-echo("student index");
+echo($action);
 // // $user_level = $_SESSION['userLevel'];
 
 // // if(empty($user_level))

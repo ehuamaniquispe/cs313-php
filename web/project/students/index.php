@@ -20,6 +20,7 @@ else{
 
     echo("POST");
 }
+echo($action);
 
 // switch ($action){
 

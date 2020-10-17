@@ -8,20 +8,19 @@
   include '../modules/head.php';
   ?>
 
-    <title>Students</title>
+    <title>Teachers</title>
     
 </head>
 <body>
     <main>
-        <?php
+    <?php
         include '../modules/navbar.php';
         ?>
-
-    <h1>Students</h1>
+    <h1>Teachers</h1>
     
         <table class="table table-striped">
             <?php
-            echo($displayStudentsInfo)
+            echo("teachers");
             ?>
         </table>
     </main>    

@@ -17,7 +17,16 @@ switch ($action){
 
      $checkUser = checkUser($userName,$pass);
 
+     if(empty($checkUser)){
+         echo("User not found");
+     }
+     else{
+         $_SESSION['userName'] = $userName;
+         $_SESSION['userLevel'] = $checkUser[user_level]; 
+        // header('location:../students'); 
+     }
      print_r($checkUser);
+
     //  echo ($userName);
     //  echo ($pass);
 

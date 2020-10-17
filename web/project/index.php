@@ -1,2 +1,2 @@
 <?php
-include "views/login.php";
+header('location:views/login.php');

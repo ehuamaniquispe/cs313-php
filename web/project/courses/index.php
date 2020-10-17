@@ -1,7 +1,7 @@
 <?php session_start();
 
 require_once '../library/connection.php';
-require_once '../model/teachers-model.php';
+require_once '../model/courses-model.php';
 require_once '../library/functions.php';
 
 $action = filter_input(INPUT_POST, 'action');

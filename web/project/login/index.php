@@ -23,11 +23,11 @@ switch ($action){
      else{
          $_SESSION['userName'] = $userName;
          $_SESSION['userLevel'] = $checkUser[user_level]; 
+          echo ($_SESSION['userLevel']);
         // header('location:../students'); 
      }
      print_r($checkUser);
 
-    //  echo ($userName);
     //  echo ($pass);
 
     break;

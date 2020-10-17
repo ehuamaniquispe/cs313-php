@@ -25,3 +25,27 @@ function displayStudentsInfo($students)
 
     return $tableStudents;
 }
+
+function displayTeachersInfo($teachers)
+{
+    $tableTeachers = '<thead>';
+    $tableTeachers .= '<tr>';
+    $tableTeachers .= '<th>Name</th>';
+    $tableTeachers .= '<th>Last Name</th>';
+    $tableTeachers .= '<th>Options</th>';
+    $tableTeachers .= '</tr>';
+    $tableTeachers .= '</thead>';
+    $tableTeachers .= '<tbody>';
+    foreach ($teachers as $teacher) {
+        $tableTeachers .= '<tr>';
+        $tableTeachers .= "<td> $teacher[teachers_fname] </td>";
+        $tableTeachers .= "<td> $teacher[teachers_lname]</td>";
+        $tableTeachers .= "<td>  <a href='#' title='editar'> EDITAR </a> <a href='#' 'title='eliminar'> ELIMINAR </a></td>";
+        // $tableTeachers .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
+        $tableTeachers .= '</tr>';
+    }
+    $tableTeachers .= '</tbody>';
+
+    return $tableTeachers;
+
+}

@@ -1,12 +1,5 @@
 <?php session_start();
 
-
-// // $user_level = $_SESSION['userLevel'];
-
-// // if(empty($user_level))
-// // echo("Requiered authorization");
-// // die();
-
 require_once '../library/connection.php';
 require_once '../model/students-model.php';
 require_once '../library/functions.php';

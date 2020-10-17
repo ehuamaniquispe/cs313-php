@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">lANGUAGE CENTER</a>
+  <a class="navbar-brand" href="#">LANGUAGE CENTER</a>
 
   <!--   boton responsive una vez que la pantalla sea muy pequeña aparece un icono con 3 lineas ideal para celulares -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

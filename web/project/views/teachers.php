@@ -1,3 +1,11 @@
+<?php session_start();
+$user_level = $_SESSION['userLevel'];
+
+if(empty($user_level))
+echo("Requiered authorization");
+die();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +28,7 @@
     
         <table class="table table-striped">
             <?php
-            echo("teachers");
+            echo($displayTeachersInfo);
             ?>
         </table>
     </main>    

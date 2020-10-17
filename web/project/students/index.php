@@ -46,12 +46,8 @@ switch ($action){
     default:
     
     $getStudentsInfo=getStudentsInfo();
-    print_r($getStudentsInfo);
     $displayStudentsInfo = displayStudentsInfo($getStudentsInfo);
-    echo($displayStudentsInfo);
-
-    include '../view/students.php';
-    echo("default");
+    include '../views/students.php';
 
 }
 

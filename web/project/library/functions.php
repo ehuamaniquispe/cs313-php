@@ -49,3 +49,25 @@ function displayTeachersInfo($teachers)
     return $tableTeachers;
 
 }
+
+function displayCoursesInfo($courses)
+{
+    $tableCourses = '<thead>';
+    $tableCourses .= '<tr>';
+    $tableCourses .= '<th>Name</th>';
+    $tableCourses .= '<th>Options</th>';
+    $tableCourses .= '</tr>';
+    $tableCourses .= '</thead>';
+    $tableCourses .= '<tbody>';
+    foreach ($courses as $course) {
+        $tableCourses .= '<tr>';
+        $tableCourses .= "<td> $course[courses_name] </td>";
+        $tableCourses .= "<td>  <a href='#' title='editar'> EDITAR </a> <a href='#' 'title='eliminar'> ELIMINAR </a></td>";
+        // $tableCourses .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
+        $tableCourses .= '</tr>';
+    }
+    $tableCourses .= '</tbody>';
+
+    return $tableCourses;
+
+}

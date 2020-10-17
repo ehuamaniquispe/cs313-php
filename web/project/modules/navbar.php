@@ -21,5 +21,6 @@
         <a class="nav-link" href="../courses/" title="Courses"> Courses </a>
       </li>
     </ul>
+    <a class="nav-link" href="../views/logout.php" title="Log out">Log out </a>
   </div>
 </nav>

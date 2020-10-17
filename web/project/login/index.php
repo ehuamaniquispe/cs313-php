@@ -1,7 +1,8 @@
 <?php session_start();
 
 require_once '../library/connection.php';
-require_once '../model/login.php';
+require_once '../model/login-model.php';
+require_once '../library/functions.php';
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
@@ -23,8 +24,10 @@ switch ($action){
      else{
          $_SESSION['userName'] = $userName;
          $_SESSION['userLevel'] = $checkUser[user_level]; 
-          echo ($_SESSION['userLevel']);
-        // header('location:../students'); 
+        //   echo ($_SESSION['userLevel']);
+        header('location:../students'); 
+        // include'../students'; 
+
      }
      print_r($checkUser);
 

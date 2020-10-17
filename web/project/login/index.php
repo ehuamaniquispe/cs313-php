@@ -19,4 +19,8 @@ switch ($action){
      echo ($pass);
 
     break;
+
+    default:
+    echo("default");
+
 }

@@ -8,7 +8,7 @@
 <body>
 
 <main>
-<form action="../login" method="POST">
+<form action="../login/index.php" method="POST">
 
     <label for="userName" >User Name </label>
     <input type="text" id="userName" name="userName">

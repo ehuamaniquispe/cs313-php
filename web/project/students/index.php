@@ -6,9 +6,9 @@
 // echo("Requiered authorization");
 // die();
 
-require_once '../library/connection.php';
-require_once '../model/students-model.php';
-require_once '../library/functions.php';
+// require_once '../library/connection.php';
+// require_once '../model/students-model.php';
+// require_once '../library/functions.php';
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){

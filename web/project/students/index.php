@@ -15,6 +15,9 @@ if ($action == NULL){
     $action = filer_input(INPUT_GET, 'action');
 }
 
+echo($action);
+exit;
+
 switch ($action){
 
 

@@ -14,7 +14,7 @@
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL){
     echo("GET");
-    $action = filer_input(INPUT_GET, 'action');
+    $action = $_GET['action'];
     echo($action);
 }
 else{

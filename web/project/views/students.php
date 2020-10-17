@@ -13,7 +13,7 @@
 </head>
 <body>
     <main>
-        <table>
+        <table class="table table-striped">
             <?php
             echo($displayStudentsInfo)
             ?>

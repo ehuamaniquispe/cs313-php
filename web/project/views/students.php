@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
     <main>
-    <?php
-     echo($displayStudentsInfo)
-    ?>
+    <table>
+        <?php
+        echo($displayStudentsInfo)
+        ?>
+    </table>
     </main>
 </head>
 <body>

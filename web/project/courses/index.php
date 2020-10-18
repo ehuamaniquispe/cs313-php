@@ -18,9 +18,9 @@ switch ($action){
   
      $courseDetail = courseDetail($courseId);
      print_r($courseDetail);
-    // $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
+    $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
 
-    // include '../views/courseDetail.php';
+    include '../views/courseDetail.php';
      
 
     break;

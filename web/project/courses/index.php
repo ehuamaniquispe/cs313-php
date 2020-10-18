@@ -13,12 +13,13 @@ if ($action == NULL){
 switch ($action){
 
     case 'viewDetail':
-     $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
+        echo("viewDetail");
+    //  $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
   
-     $courseDetail = courseDetail($courseId);
-    $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
+    //  $courseDetail = courseDetail($courseId);
+    // $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
 
-    include '../views/courseDetail.php';
+    // include '../views/courseDetail.php';
      
 
     break;

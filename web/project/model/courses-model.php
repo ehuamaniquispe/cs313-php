@@ -15,6 +15,8 @@ function getCoursesInfo()
 
 function courseDetail($courseId){
 
+    
+
     $db = dbConnect();
     $sql ='SELECT 
             id_courses,

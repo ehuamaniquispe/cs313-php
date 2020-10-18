@@ -33,7 +33,7 @@ function courseDetail($courseId){
     $stmt=$db->prepare($sql);
     $stmt->bindValue(':courseId',$courseId,PDO::PARAM_INT);
     $stmt->execute();
-    $coursesDetail=$stmt->fetchAll(PDO::FETCH_ASSOC);
+    $coursesDetail=$stmt->fetch(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
     return $coursesDetail;
 }

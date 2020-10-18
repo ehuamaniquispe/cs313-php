@@ -12,27 +12,14 @@ if ($action == NULL){
 
 switch ($action){
 
+    case 'viewDetail':
+     $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
+  
+     $courseDetail = courseDetail($courseId);
+    $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
 
-    case 'checkCredentials':
-    //  $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
-    //  $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
-
-    //  $checkUser = checkUser($userName,$pass);
-
-    //  if(empty($checkUser)){
-    //      echo("User not found");
-    //  }
-    //  else{
-    //      $_SESSION['userName'] = $userName;
-    //      $_SESSION['userLevel'] = $checkUser[user_level]; 
-    //     //   echo ($_SESSION['userLevel']);
-    //     header('location:../students'); 
-    //     // include'../students'; 
-
-    //  }
-    //  print_r($checkUser);
-
-    // //  echo ($pass);
+    include '../views/courseDetail.php';
+     
 
     break;
 

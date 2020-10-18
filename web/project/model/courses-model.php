@@ -24,7 +24,7 @@ function courseDetail($courseId){
             teachers_fname,
             teachers_lname
            FROM courses
-           INNER JOIN students
+           LEFT JOIN students
            ON courses.student_id_students = students.id_students
            LEFT JOIN teachers
            ON courses.teachers_id_teachers = teachers.id_teachers

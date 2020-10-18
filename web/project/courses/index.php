@@ -15,9 +15,7 @@ switch ($action){
     case 'viewDetail':
        
      $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
-    //  $courseId = $_GET['courseId'];
-  echo($courseId);
-  exit();
+
      $courseDetail = courseDetail($courseId);
      print_r($courseDetail);
     $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);

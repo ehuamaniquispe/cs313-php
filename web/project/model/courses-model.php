@@ -26,7 +26,7 @@ function courseDetail($courseId){
            FROM courses
            INNER JOIN students
            ON courses.student_id_students = students.id_students
-           INNER JOIN teachers
+           LEFT JOIN teachers
            ON courses.teachers_id_teachers = teachers.id_teachers
            WHERE id_courses=:courseId';
 

@@ -2,9 +2,7 @@
 function getCoursesInfo()
 {
     $db = dbConnect();
-    $sql ='SELECT 
-            id_courses,
-            courses_name
+    $sql ='SELECT * 
            FROM courses';
     $stmt=$db->prepare($sql);
     $stmt->execute();

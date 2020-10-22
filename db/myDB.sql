@@ -165,5 +165,11 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   ('Intermediate English 1',
   '102',
   1);
+ 
+   INSERT INTO students_has_courses
+  VALUES
+  (1,
+  1);
 
+ 
  

@@ -64,8 +64,8 @@ function displayCoursesInfo($courses)
         $tableCourses .= '<tr>';
         $tableCourses .= "<td> $course[courses_name] </td>";
         $tableCourses .= "<td> $course[courses_section] </td>";
-        $tableCourses .= "<td> <a href='#' title='view'> VIEW </a> <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
-        // $tableCourses .= "<td> <a href='../courses/index.php?action=viewDetail&courseId=$course[id_courses]' title='view'> VIEW </a> <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
+        // $tableCourses .= "<td> <a href='#' title='view'> VIEW </a> <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
+        $tableCourses .= "<td> <a href='../courses/index.php?action=viewDetail&courseId=$course[id_courses]' title='view'> VIEW </a> <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
         // $tableCourses .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
         $tableCourses .= '</tr>';
     }

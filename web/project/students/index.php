@@ -14,26 +14,9 @@ switch ($action){
 
 
     case 'newStudent':
-    //  $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
-    //  $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
-
-    //  $checkUser = checkUser($userName,$pass);
-
-    //  if(empty($checkUser)){
-    //      echo("User not found");
-    //  }
-    //  else{
-    //      $_SESSION['userName'] = $userName;
-    //      $_SESSION['userLevel'] = $checkUser[user_level]; 
-    //     //   echo ($_SESSION['userLevel']);
-    //     header('location:../students'); 
-    //     // include'../students'; 
-
-    //  }
-    //  print_r($checkUser);
-
-    // //  echo ($pass);
-    include '../view/new_student.php';
+        echo("newStudent");
+        exit(); 
+        include '../view/new_student.php';
 
     break;
 
@@ -49,7 +32,7 @@ switch ($action){
         echo($student_user_name);
         echo($student_user_pass);
 
-
+    break;
 
 
 

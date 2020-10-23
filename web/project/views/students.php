@@ -23,11 +23,11 @@ if(empty($user_level)){
 <body>
     <main>
 
-<a href="../students/index.php?action=newStudent">New Student </a>
         <?php
         include '../modules/navbar.php';
         ?>
 
+    <a href="../students/index.php?action=newStudent">New Student </a>
     <h1>Students</h1>
     
         <table class="table table-striped">

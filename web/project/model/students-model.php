@@ -21,10 +21,10 @@ function insertNewStudent($student_fname,$student_lname,$student_user_name,$stud
 $db = dbConnect();
 $sql = "INSERT INTO students
         VALUES(
-        :student_fname,
-        :student_lname,
-        :student_user_name,
-        :student_user_pass)";
+        ':student_fname',
+        ':student_lname',
+        ':student_user_name',
+        ':student_user_pass')";
 $stmt = $bd->prepare($sql);
 $stmt->bindValue(':student_fname',$student_fname,PDO::PARAM_STR);
 $stmt->bindValue(':student_lname',$student_lname,PDO::PARAM_STR);

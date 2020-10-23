@@ -2,10 +2,10 @@
 
 function displayScriptures($scripturesInfo)
 {
-    $tableScriptures = "";
+    $scripturesInfoDisplay = "";
     foreach($scripturesInfo as $scriptureInfo){
-        $tableScriptures.="<b>$scriptureInfo[book] $scriptureInfo[chapter] : $scriptureInfo[verse]</b> - $scriptureInfo[content] <br>" ;
+        $scripturesInfoDisplay.="<b>$scriptureInfo[book] $scriptureInfo[chapter]:$scriptureInfo[verse]</b> - \" $scriptureInfo[content] \" <br>" ;
     }
 
-    return $tableScriptures;
+    return $scripturesInfoDisplay;
 }

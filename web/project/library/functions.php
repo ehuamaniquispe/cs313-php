@@ -75,7 +75,7 @@ function displayCoursesInfo($courses)
 
 }
 
-function displayCoursesDetail($courseInfo)
+function displayStudentsInCourse($courseInfo)
 {
     $tableStudentsCourses = '<thead>';
     $tableStudentsCourses .= '<tr>';

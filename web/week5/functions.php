@@ -7,5 +7,5 @@ function displayScriptures($scripturesInfo)
         $tableScriptures.="$scriptureInfo[book]";
     }
 
-
+    return $tableScriptures;
 }

@@ -11,24 +11,14 @@ function getCoursesInfo()
     return $coursesInfo;
 }
 
-function courseDetail($courseId){
+function studentsInCourse($courseId){
 
     
 
     $db = dbConnect();
-    $sql ='SELECT 
-            id_courses,
-            courses_name,
-            students_fname,
-            students_lname,
-            teachers_fname,
-            teachers_lname
-           FROM courses
-           LEFT JOIN students
-           ON courses.student_id_students = students.id_students
-           LEFT JOIN teachers
-           ON courses.teachers_id_teachers = teachers.id_teachers
-           WHERE id_courses=:courseId';
+    $sql ='SELECT *
+    FROM student_has_courses
+           WHERE courses_id_courses=:courseId';
 
     $stmt=$db->prepare($sql);
     $stmt->bindValue(':courseId',$courseId,PDO::PARAM_INT);

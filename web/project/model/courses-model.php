@@ -13,8 +13,6 @@ function getCoursesInfo()
 
 function studentsInCourse($courseId){
 
-    
-
     $db = dbConnect();
     $sql ='SELECT 
     students_reg_num,
@@ -29,7 +27,7 @@ function studentsInCourse($courseId){
     $stmt=$db->prepare($sql);
     $stmt->bindValue(':courseId',$courseId,PDO::PARAM_INT);
     $stmt->execute();
-    $coursesDetail=$stmt->fetch(PDO::FETCH_ASSOC);
+    $coursesDetail=$stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
     return $coursesDetail;
 }

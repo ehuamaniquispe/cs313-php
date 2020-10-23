@@ -19,7 +19,7 @@ switch ($action){
      echo($userName);
      echo($pass);
 
-     exit();
+     
 
      $checkUser = checkUser($userName,$pass);
 

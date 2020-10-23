@@ -17,7 +17,7 @@ switch ($action){
      $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
 
      $studentsInCourse = studentsInCourse($courseId);
-     echo($studentsInCourse);
+     print_r($studentsInCourse);
      exit();
     $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
 

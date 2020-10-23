@@ -14,9 +14,8 @@ switch ($action){
 
 
     case 'newStudent':
-        echo("newStudent");
-        exit(); 
-        include '../view/new_student.php';
+       
+        include '../views/new_student.php';
 
     break;
 

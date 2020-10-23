@@ -14,18 +14,20 @@ switch ($action){
 
     case 'viewDetail':
        
-     $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
-     $studentsInCourse = studentsInCourse($courseId);
-     $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
+        $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
+        $studentsInCourse = studentsInCourse($courseId);
+        $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
+        echo($displayStudentsInCourse);
+        exit();
 
-    include '../views/courseDetail.php';
+        include '../views/courseDetail.php';
 
-    break;
+        break;
 
     default:
-    
-    $getCoursesInfo=getCoursesInfo();
-    $displayCoursesInfo = displayCoursesInfo($getCoursesInfo);
-    include '../views/courses.php';
+        
+        $getCoursesInfo=getCoursesInfo();
+        $displayCoursesInfo = displayCoursesInfo($getCoursesInfo);
+        include '../views/courses.php';
 
 }

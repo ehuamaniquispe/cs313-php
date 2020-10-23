@@ -16,20 +16,21 @@ switch ($action){
      $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
      $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 
-     echo($userName);
-     echo($pass);
-
      
 
      $checkUser = checkUser($userName,$pass);
 
      if(empty($checkUser)){
-         echo("User not found");
-     }
+         echo("User not found");  
+    }
      else{
          $_SESSION['userName'] = $userName;
-         $_SESSION['userLevel'] = $checkUser[user_level]; 
-        //   echo ($_SESSION['userLevel']);
+         $_SESSION['userLevel'] = $checkUser[student_user_level];
+         if(empty($_SESSION['userLevel']))
+         {
+            $_SESSION['userLevel'] = $checkUser[teachers_user_level];
+
+         } 
         $action = "default";
         header("location:../students/index.php?action=$action"); 
         exit();

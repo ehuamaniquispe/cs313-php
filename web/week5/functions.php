@@ -4,7 +4,7 @@ function displayScriptures($scripturesInfo)
 {
     $tableScriptures = "";
     foreach($scripturesInfo as $scriptureInfo){
-        $tableScriptures.="<b>$scriptureInfo[book] $scriptureInfo[chapter] : $scriptureInfo[verse]</b> - $scriptureInfo[content]";
+        $tableScriptures.="<b>$scriptureInfo[book] $scriptureInfo[chapter] : $scriptureInfo[verse]</b> - $scriptureInfo[content] <br>" ;
     }
 
     return $tableScriptures;

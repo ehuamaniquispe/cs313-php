@@ -17,7 +17,7 @@ function studentsInCourse($courseId){
 
     $db = dbConnect();
     $sql ='SELECT *
-    FROM student_has_courses
+    FROM students_has_courses
            WHERE courses_id_courses=:courseId';
 
     $stmt=$db->prepare($sql);

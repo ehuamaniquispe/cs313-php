@@ -1,23 +1,8 @@
 <?php
 require_once 'connection.php';
+require_once 'model.php';
+require_once 'functions.php';
 
-function scripturesInfo()
-{
-	$db = dbConnect();
-
-	$sql = 'SELECT * FROM Scriptures';
-
-	$stmt = $db->prepare($sql);
-
-	// $stmt->bindValue(':personalEmail', $usuario, PDO::PARAM_STR);
-   
-
-    $stmt->execute();
-    $scriptureInfo = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    return $scriptureInfo;
-   
-}
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +16,10 @@ function scripturesInfo()
 <?php    
 // scripturesInfo();
 // var scripture = scripturesInfo();
-print_r(scripturesInfo());
+$scripturesInfo = scripturesInfo();
+$displayScriptures = displayScriptures($scripturesInfo);
+// print_r(scripturesInfo());
+echo($displayScriptures);
 ?>
 
 </body>

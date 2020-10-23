@@ -20,18 +20,19 @@ return $studentsInfo;
 function insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass){
 $db = dbConnect();
 $sql = "INSERT INTO students
-(students_reg_num,
-students_fname,
-students_lname,
-students_user_name,
-students_user_pass
-)
+        (students_reg_num,
+        students_fname,
+        students_lname,
+        students_user_name,
+        students_user_pass,
+        students_user_level)
         VALUES(
         :student_reg_num,
         :student_fname,
         :student_lname,
         :student_user_name,
-        :student_user_pass)";
+        :student_user_pass,
+        DEFAULT)";
 $stmt = $bd->prepare($sql);
 $stmt->bindValue(':student_reg_num',$student_reg_num,PDO::PARAM_STR);
 $stmt->bindValue(':student_fname',$student_fname,PDO::PARAM_STR);

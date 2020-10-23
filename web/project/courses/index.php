@@ -15,12 +15,9 @@ switch ($action){
     case 'viewDetail':
        
      $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
-     echo($courseId);
 
      $studentsInCourse = studentsInCourse($courseId);
-     print_r($studentsInCourse);
-     exit();
-    $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
+    // $displayCoursesDetail = displayCoursesDetail($getCoursesDetail);
 
     include '../views/courseDetail.php';
      

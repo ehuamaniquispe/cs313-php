@@ -16,8 +16,14 @@ function studentsInCourse($courseId){
     
 
     $db = dbConnect();
-    $sql ='SELECT *
+    $sql ='SELECT 
+    students_reg_num,
+    students_fname,
+    students_lname,
+    students_user_name
     FROM students_has_courses
+    INNER JOIN students
+    ON students_has_courses.students_id_students = students.id_students
            WHERE courses_id_courses=:courseId';
 
     $stmt=$db->prepare($sql);

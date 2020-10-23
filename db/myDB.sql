@@ -8,9 +8,9 @@ CREATE TABLE IF NOT EXISTS "students" (
   "students_reg_num" VARCHAR(6) NOT NULL,
   "students_fname" VARCHAR(45) NOT NULL,
   "students_lname" VARCHAR(45) NOT NULL,
-  "user_name" VARCHAR(45) NOT NULL,
-  "user_pass" VARCHAR(255) NOT NULL,
-  "user_level" VARCHAR(1) NOT NULL DEFAULT 1);
+  "students_user_name" VARCHAR(45) NOT NULL,
+  "students_user_pass" VARCHAR(255) NOT NULL,
+  "students_user_level" VARCHAR(1) NOT NULL DEFAULT 1);
 
 
 -- -----------------------------------------------------
@@ -21,9 +21,9 @@ CREATE TABLE IF NOT EXISTS "teachers" (
   "id_teachers" SERIAL PRIMARY KEY,
   "teachers_fname" VARCHAR(45) NOT NULL,
   "teachers_lname" VARCHAR(45) NOT NULL,
-  "user_name" VARCHAR(45) NOT NULL,
-  "user_pass" VARCHAR(255) NOT NULL,
-  "user_level" VARCHAR(1) NOT NULL DEFAULT 2);
+  "teachers_user_name" VARCHAR(45) NOT NULL,
+  "teachers_user_pass" VARCHAR(255) NOT NULL,
+  "teachers_user_level" VARCHAR(1) NOT NULL DEFAULT 2);
 
 
 -- -----------------------------------------------------
@@ -61,9 +61,9 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   (students_reg_num,
    students_fname,
    students_lname,
-   user_name,
-   user_pass,
-   user_level)
+   students_user_name,
+   students_user_pass,
+   students_user_level)
   VALUES
   ('1',
   'Eduardo',
@@ -76,9 +76,9 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   (students_reg_num,
    students_fname,
    students_lname,
-   user_name,
-   user_pass,
-   user_level)
+   students_user_name,
+   students_user_pass,
+   students_user_level)
   VALUES
   ('2',
   'Maria',
@@ -91,9 +91,9 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   (students_reg_num,
    students_fname,
    students_lname,
-   user_name,
-   user_pass,
-   user_level)
+   students_user_name,
+   students_user_pass,
+   students_user_level)
   VALUES
   ('3',
   'Matias',
@@ -106,9 +106,9 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   INSERT INTO teachers
   (teachers_fname,
    teachers_lname,
-   user_name,
-   user_pass,
-   user_level)
+   teachers_user_name,
+   teachers_user_pass,
+   teachers_user_level)
   VALUES
   ('Renzo',
   'Arriaran',
@@ -119,9 +119,9 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   INSERT INTO teachers
   (teachers_fname,
    teachers_lname,
-   user_name,
-   user_pass,
-   user_level)
+   teachers_user_name,
+   teachers_user_pass,
+   teachers_user_level)
   VALUES
   ('Brigit',
   'De la cruz',
@@ -166,7 +166,7 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   '102',
   1);
  
-   INSERT INTO students_has_courses
+  INSERT INTO students_has_courses
   VALUES
   (1,
   1);

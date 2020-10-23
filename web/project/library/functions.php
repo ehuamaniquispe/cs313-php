@@ -79,15 +79,19 @@ function displayStudentsInCourse($courseInfo)
 {
     $tableStudentsCourses = '<thead>';
     $tableStudentsCourses .= '<tr>';
+    $tableStudentsCourses .= '<th>#Reg.</th>';
     $tableStudentsCourses .= '<th>Name</th>';
     $tableStudentsCourses .= '<th>Last Name</th>';
+    $tableStudentsCourses .= '<th>User Name</th>';
     $tableStudentsCourses .= '</tr>';
     $tableStudentsCourses .= '</thead>';
     $tableStudentsCourses .= '<tbody>';
     foreach ($courseInfo as $coursesInfo) {
         $tableStudentsCourses .= '<tr>';
+        $tableStudentsCourses .= "<td> $coursesInfo[students_reg_num] </td>";
         $tableStudentsCourses .= "<td> $coursesInfo[students_fname] </td>";
         $tableStudentsCourses .= "<td> $coursesInfo[students_lname] </td>";
+        $tableStudentsCourses .= "<td> $coursesInfo[students_user_nam] </td>";
         // $tableStudentsCourses .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
         $tableStudentsCourses .= '</tr>';
     }
@@ -96,3 +100,4 @@ function displayStudentsInCourse($courseInfo)
     return $tableStudentsCourses;
 
 }
+    

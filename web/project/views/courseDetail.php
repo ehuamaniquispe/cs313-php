@@ -29,7 +29,7 @@ if(empty($user_level)){
     
         <table class="table table-striped">
             <?php
-            echo($displayCoursesDetail);
+            echo($displayStudentsInCourse);
             ?>
         </table>
     </main>    

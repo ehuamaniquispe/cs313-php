@@ -25,11 +25,8 @@ switch ($action){
         $student_user_name = filter_input(INPUT_POST,'student_user_name', FILTER_SANITIZE_STRING);
         $student_user_pass = filter_input(INPUT_POST,'student_user_pass', FILTER_SANITIZE_STRING);
 
-
-        echo($student_fname);
-        echo($student_lname);
-        echo($student_user_name);
-        echo($student_user_pass);
+        $insertNewStudent = insertNewStudent($student_fname,$student_lname,$student_user_name,$student_user_pass);
+        echo($insertNewStudent);
 
     break;
 

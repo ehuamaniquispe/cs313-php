@@ -16,6 +16,11 @@ switch ($action){
      $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
      $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 
+     echo($userName);
+     echo($pass);
+
+     exit();
+
      $checkUser = checkUser($userName,$pass);
 
      if(empty($checkUser)){

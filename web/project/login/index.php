@@ -25,7 +25,7 @@ switch ($action){
     }
      else{
          $_SESSION['userName'] = $userName;
-         $_SESSION['userLevel'] = $checkUser[student_user_level];
+         $_SESSION['userLevel'] = $checkUser[students_user_level];
          if(empty($_SESSION['userLevel']))
          {
             $_SESSION['userLevel'] = $checkUser[teachers_user_level];

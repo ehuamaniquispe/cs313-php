@@ -13,7 +13,7 @@ if ($action == NULL){
 switch ($action){
 
 
-    case 'checkCredentials':
+    case 'newStudent':
     //  $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
     //  $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 
@@ -33,8 +33,25 @@ switch ($action){
     //  print_r($checkUser);
 
     // //  echo ($pass);
+    include '../view/new_student.php';
 
     break;
+
+    case 'new_student':
+        $student_fname = filter_input(INPUT_POST,'student_fname', FILTER_SANITIZE_STRING);
+        $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
+        $student_user_name = filter_input(INPUT_POST,'student_user_name', FILTER_SANITIZE_STRING);
+        $student_user_pass = filter_input(INPUT_POST,'student_user_pass', FILTER_SANITIZE_STRING);
+
+
+        echo($student_fname);
+        echo($student_lname);
+        echo($student_user_name);
+        echo($student_user_pass);
+
+
+
+
 
     default:
     

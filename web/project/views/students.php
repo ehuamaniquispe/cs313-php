@@ -22,6 +22,8 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
+
+<a href="../students/index.php?action=newStudent">New Student </a>
         <?php
         include '../modules/navbar.php';
         ?>

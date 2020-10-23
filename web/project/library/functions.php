@@ -91,7 +91,7 @@ function displayStudentsInCourse($courseInfo)
         $tableStudentsCourses .= "<td> $coursesInfo[students_reg_num] </td>";
         $tableStudentsCourses .= "<td> $coursesInfo[students_fname] </td>";
         $tableStudentsCourses .= "<td> $coursesInfo[students_lname] </td>";
-        $tableStudentsCourses .= "<td> $coursesInfo[students_user_nam] </td>";
+        $tableStudentsCourses .= "<td> $coursesInfo[students_user_name] </td>";
         // $tableStudentsCourses .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
         $tableStudentsCourses .= '</tr>';
     }

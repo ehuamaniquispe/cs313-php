@@ -17,15 +17,23 @@ $stmt->closeCursor();
 return $studentsInfo;
 }
 
-function insertNewStudent($student_fname,$student_lname,$student_user_name,$student_user_pass){
+function insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass){
 $db = dbConnect();
 $sql = "INSERT INTO students
+(students_reg_num,
+students_fname,
+students_lname,
+students_user_name,
+students_user_pass
+)
         VALUES(
-        ':student_fname',
-        ':student_lname',
-        ':student_user_name',
-        ':student_user_pass')";
+        :student_reg_num,
+        :student_fname,
+        :student_lname,
+        :student_user_name,
+        :student_user_pass)";
 $stmt = $bd->prepare($sql);
+$stmt->bindValue(':student_reg_num',$student_reg_num,PDO::PARAM_STR);
 $stmt->bindValue(':student_fname',$student_fname,PDO::PARAM_STR);
 $stmt->bindValue(':student_lname',$student_lname,PDO::PARAM_STR);
 $stmt->bindValue(':student_user_name',$student_user_name,PDO::PARAM_STR);

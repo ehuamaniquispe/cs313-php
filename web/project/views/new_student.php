@@ -29,6 +29,8 @@ if(empty($user_level)){
     
         <form action="../students/index.php" method="POST">
 
+            #. Reg.
+            <input type="text" name="student_reg_num" id="student_reg_num">
             First Name
             <input type="text" name="student_fname" id="student_fname">
             Last Name

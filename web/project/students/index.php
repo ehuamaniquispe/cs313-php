@@ -20,12 +20,13 @@ switch ($action){
     break;
 
     case 'new_student':
+        $student_reg_num = filter_input(INPUT_POST,'student_reg_num', FILTER_SANITIZE_STRING);
         $student_fname = filter_input(INPUT_POST,'student_fname', FILTER_SANITIZE_STRING);
         $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
         $student_user_name = filter_input(INPUT_POST,'student_user_name', FILTER_SANITIZE_STRING);
         $student_user_pass = filter_input(INPUT_POST,'student_user_pass', FILTER_SANITIZE_STRING);
 
-        $insertNewStudent = insertNewStudent($student_fname,$student_lname,$student_user_name,$student_user_pass);
+        $insertNewStudent = insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass);
         echo($insertNewStudent);
 
     break;

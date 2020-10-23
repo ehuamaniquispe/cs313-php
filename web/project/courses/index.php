@@ -16,10 +16,10 @@ switch ($action){
        
         $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
         $studentsInCourse = studentsInCourse($courseId);
-        print_r($studentsInCourse);
+        // print_r($studentsInCourse);
         $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
-        echo($displayStudentsInCourse);
-        exit();
+        // echo($displayStudentsInCourse);
+        // exit();
 
         include '../views/courseDetail.php';
 

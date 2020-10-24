@@ -21,7 +21,7 @@ switch ($action){
 
      if(empty($checkUser)){
          echo("UserName not found");
-         header ('location: ../login');
+         header ("location:../login");
          exit();  
     }
      else{
@@ -32,7 +32,7 @@ switch ($action){
 
         if($password_verification==0){
             echo("Invalid pasword");
-            header ('location: ../login');
+            header ("location:../login");
             exit();
 
         }

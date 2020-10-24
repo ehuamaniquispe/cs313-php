@@ -51,10 +51,22 @@ switch ($action){
 
         include '../views/edit_student.php';
     break;
+    
+    case 'edit_student':
 
+        $student_id = filter_input(INPUT_POST,'student_id', FILTER_SANITIZE_NUMBER_INT);
+        $student_reg_num = filter_input(INPUT_POST,'student_reg_num', FILTER_SANITIZE_STRING);
+        $student_fname = filter_input(INPUT_POST,'student_fname', FILTER_SANITIZE_STRING);
+        $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
+
+        $updateStudent = updateStudent($student_id,$student_reg_num,$student_fname,$student_lname);
+        echo($updateStudent);
+
+    break;
     default:
     
     $getStudentsInfo=getStudentsInfo();
+    
     $displayStudentsInfo = displayStudentsInfo($getStudentsInfo);
     include '../views/students.php';
 

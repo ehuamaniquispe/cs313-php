@@ -65,3 +65,28 @@ $rowChanged=$stmt->rowCount();
 $stmt->closeCursor();
 return $rowChanged;
 }
+
+
+function updateStudent($student_id,$student_reg_num,$student_fname,$student_lname){
+
+
+$db = dbConnect();
+$sql = "UPDATE students
+        SET 
+        students_reg_num = :student_reg_num, 
+        students_fname = :student_fname, 
+        students_lname = :student_lname 
+        WHERE id_students = :student_id)";
+$stmt = $db->prepare($sql);
+$stmt->bindValue(':student_id',$student_id,PDO::PARAM_INT);
+$stmt->bindValue(':student_reg_num',$student_reg_num,PDO::PARAM_STR);
+$stmt->bindValue(':student_fname',$student_fname,PDO::PARAM_STR);
+$stmt->bindValue(':student_lname',$student_lname,PDO::PARAM_STR);
+$stmt->execute();
+$rowChanged=$stmt->rowCount();
+$stmt->closeCursor();
+return $rowChanged;
+
+
+
+}

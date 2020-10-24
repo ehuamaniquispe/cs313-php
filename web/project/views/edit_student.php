@@ -33,19 +33,18 @@ if(empty($user_level)){
             <input type="text" name="student_reg_num" id="student_reg_num" required value="<?php if(isset($getStudentsInfoById[students_reg_num])){echo($getStudentsInfoById[students_reg_num]);}?>"><br>
             
             <label for="student_fname">First Name</label><br>
-            <input type="text" name="student_fname" id="student_fname" required><br>
+            <input type="text" name="student_fname" id="student_fname" required value="<?php if(isset($getStudentsInfoById[students_fname])){echo($getStudentsInfoById[students_fname]);}?>"><br>
 
             <label for="student_lname">Last Name</label><br>
-            <input type="text" name="student_lname" id="student_lname" required><br>
+            <input type="text" name="student_lname" id="student_lname" required value="<?php if(isset($getStudentsInfoById[students_lname])){echo($getStudentsInfoById[students_lname]);}?>"><br>
             
-            <label for="student_user_name">User Name</label><br>
-            <input type="text" name="student_user_name" id="student_user_name" required><br>
+            <!-- <label for="student_user_name">User Name</label><br>
+            <input type="text" name="student_user_name" id="student_user_name" required value="<?php if(isset($getStudentsInfoById[students_reg_num])){echo($getStudentsInfoById[students_reg_num]);}?>"><br> -->
             
-            <label for="student_user_pass">Password</label><br>
-            <input type="password" name="student_user_pass" id="student_user_pass" required><br>
 
-            <input type="submit" value="Submit"><br>
-            <input type="hidden" name="action" value="new_student">
+            <input type="submit" value="Edit"><br>
+            <input type="hidden" name="action" value="edit_student">
+            <input type="hidden" name="student_id" value="<?php if(isset($getStudentsInfoById[id_students])){echo($getStudentsInfoById[id_students]);}?>">
         </form>
     </main>    
 </body>

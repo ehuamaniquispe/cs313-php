@@ -32,7 +32,7 @@ $sql = "INSERT INTO students
         'huamani',
         'mhuamani',
         'mhuamani',
-        DEFAULT)";
+        '1')";
 // $sql = "INSERT INTO students
 //         (students_reg_num,
 //         students_fname,

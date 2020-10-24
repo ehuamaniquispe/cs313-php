@@ -16,28 +16,40 @@ switch ($action){
      $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
      $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 
-     $hashed_pass = password_hash($pass,PASSWORD_DEFAULT);
-     echo($hashed_pass);
-     exit();
+     $checkUser = checkUser($userName);
 
-     $checkUser = checkUser($userName,$hashed_pass);
 
      if(empty($checkUser)){
-         echo("User not found");  
+         echo("UserName not found");
+         exit();  
     }
      else{
-         $_SESSION['userName'] = $userName;
-         $_SESSION['userLevel'] = $checkUser[students_user_level];
-         if(empty($_SESSION['userLevel']))
-         {
-            $_SESSION['userLevel'] = $checkUser[teachers_user_level];
 
-         } 
-        $action = "default";
-        header("location:../students/index.php?action=$action"); 
-        exit();
-        // header("location:../students/index.php"); 
-        // include'../students'; 
+        //verify the password
+
+        $password_verification = password_verify($pass,$checkUser[pass]);
+
+        if($password_verification==0){
+            echo("Invalid pasword");
+            exit();
+
+        }
+        else{
+            
+                     $_SESSION['userName'] = $userName;
+                     $_SESSION['userLevel'] = $checkUser[students_user_level];
+                     if(empty($_SESSION['userLevel']))
+                     {
+                        $_SESSION['userLevel'] = $checkUser[teachers_user_level];
+            
+                     } 
+
+                     $action = "default";
+                     header("location:../students/index.php?action=$action"); 
+                     exit();
+                     // header("location:../students/index.php"); 
+                     // include'../students'; 
+        }
 
      }
      print_r($checkUser);

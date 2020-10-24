@@ -54,6 +54,6 @@ switch ($action){
     break;
 
     default:
-    echo("default");
+    include '../views/login.php';
 
 }

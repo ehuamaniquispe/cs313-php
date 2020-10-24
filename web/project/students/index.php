@@ -59,6 +59,16 @@ switch ($action){
         $student_fname = filter_input(INPUT_POST,'student_fname', FILTER_SANITIZE_STRING);
         $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
 
+        echo($student_id);
+        echo($student_reg_num);
+        echo($student_fname);
+        echo($student_lname);
+
+        exit;
+
+
+
+
         $updateStudent = updateStudent($student_id,$student_reg_num,$student_fname,$student_lname);
         echo($updateStudent);
 

@@ -30,7 +30,7 @@ if(empty($user_level)){
         <form action="../students/index.php" method="POST">
 
             <label for="student_reg_num">#. Reg.</label><br>
-            <input type="text" name="student_reg_num" id="student_reg_num" required value="<?php if(isset($getStudentsInfoById[student_reg_num])){echo($getStudentsInfoById[student_reg_num]);}?>"><br>
+            <input type="text" name="student_reg_num" id="student_reg_num" required value="<?php if(isset($getStudentsInfoById[students_reg_num])){echo($getStudentsInfoById[students_reg_num]);}?>"><br>
             
             <label for="student_fname">First Name</label><br>
             <input type="text" name="student_fname" id="student_fname" required><br>

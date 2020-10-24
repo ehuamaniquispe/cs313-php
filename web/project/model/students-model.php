@@ -5,6 +5,7 @@ function getStudentsInfo(){
 $db = dbConnect();
 
 $sql = 'SELECT 
+        id_students,
         students_reg_num,
         students_fname,
         students_lname

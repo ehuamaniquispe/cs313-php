@@ -60,9 +60,8 @@ switch ($action){
         $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
 
         $updateStudent = updateStudent($student_id,$student_reg_num,$student_fname,$student_lname);
-        echo($updateStudent);
-        exit;
-
+        
+//check if the information to be updated is the same as before
         if(!empty($updateStudent)){
             $message = "The information has been updated";
             $_SESSION['message']=$message;

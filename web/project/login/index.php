@@ -16,9 +16,9 @@ switch ($action){
      $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
      $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 
-     
+     $hashed_pass = password_hash($pass,PASSWORD_DEFAULT);
 
-     $checkUser = checkUser($userName,$pass);
+     $checkUser = checkUser($userName,$hashed_pass);
 
      if(empty($checkUser)){
          echo("User not found");  

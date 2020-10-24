@@ -45,3 +45,6 @@ if(empty($user_level)){
 include '../modules/js-links.php'; 
 ?>
 </html>
+<?php
+unset($_SESSION['message']);
+?>

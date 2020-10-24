@@ -59,12 +59,19 @@ switch ($action){
         $student_fname = filter_input(INPUT_POST,'student_fname', FILTER_SANITIZE_STRING);
         $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
 
-        
-
-
-
         $updateStudent = updateStudent($student_id,$student_reg_num,$student_fname,$student_lname);
-        echo($updateStudent);
+
+        if(!empty($updateStudent)){
+            $message = "The information has been updated";
+            $_SESSION['message']=$message;
+            header('location:../students');
+        }
+        else{
+            $message = "the information has NOT been updated";
+            $_SESSION['message']=$message;
+            include '../students';
+        }
+
 
     break;
     default:

@@ -11,6 +11,12 @@
 <body>
 
 <main>
+<?php
+if(isset($_SESSION['message']))
+{
+  echo($_SESSION['message']);
+}
+?>
 <form action="../login/index.php" method="post">
 
     <label for="userName" >User Name </label>
@@ -30,3 +36,6 @@
 include '../modules/js-links.php'; 
 ?>
 </html>
+<?php
+unset($_SESSION['message']);
+?>

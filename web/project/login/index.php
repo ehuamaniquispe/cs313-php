@@ -20,7 +20,8 @@ switch ($action){
 
 
      if(empty($checkUser)){
-         echo("UserName not found");
+         $message = "UserName not found";
+         $_SESSION['message'] = $message;
          header ("location:../");
          exit();  
     }
@@ -31,7 +32,9 @@ switch ($action){
         $password_verification = password_verify($pass,$checkUser[pass]);
 
         if($password_verification==0){
-            echo("Invalid pasword");
+            $message = "Invalid pasword";
+         $_SESSION['message'] = $message;
+
             header ("location:../");
             exit();
 

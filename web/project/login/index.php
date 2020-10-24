@@ -37,18 +37,13 @@ switch ($action){
         else{
             
                      $_SESSION['userName'] = $userName;
-                     $_SESSION['userLevel'] = $checkUser[students_user_level];
-                     if(empty($_SESSION['userLevel']))
-                     {
-                        $_SESSION['userLevel'] = $checkUser[teachers_user_level];
-            
-                     } 
-
-                     $action = "default";
-                     header("location:../students/index.php?action=$action"); 
+                     $_SESSION['userLevel'] = $checkUser[user_level];
+                    
+                     header("location:../students"); 
                      exit();
-                     // header("location:../students/index.php"); 
-                     // include'../students'; 
+                    //  $action = "default";
+                    //  header("location:../students/index.php?action=$action"); 
+                    //  exit();
         }
 
      }

@@ -6,7 +6,7 @@ function checkUser($userName){
     $sql = 'SELECT 
             students_user_name,
             students_user_pass AS pass,
-            students_user_level
+            students_user_level AS user_level
             FROM students
             WHERE students_user_name = :userName ';
     $stmt = $db->prepare($sql);
@@ -18,7 +18,7 @@ function checkUser($userName){
         $sql = 'SELECT 
         teachers_user_name,
         teachers_user_pass AS pass,
-        teachers_user_level
+        teachers_user_level AS user_level
         FROM teachers
         WHERE teachers_user_name = :userName ';
         $stmt = $db->prepare($sql);

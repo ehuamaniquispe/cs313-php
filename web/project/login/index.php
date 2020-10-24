@@ -17,6 +17,8 @@ switch ($action){
      $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 
      $hashed_pass = password_hash($pass,PASSWORD_DEFAULT);
+     echo($hashed_pass);
+     exit();
 
      $checkUser = checkUser($userName,$hashed_pass);
 

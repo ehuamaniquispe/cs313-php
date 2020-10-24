@@ -46,6 +46,8 @@ switch ($action){
 
     case 'edit':
         $student_id = filter_input(INPUT_GET,'student_id', FILTER_SANITIZE_NUMBER_INT);
+        echo($student_id);
+        exit;
         $getStudentsInfoById=getStudentsInfoById($student_id);
 
         include '../views/edit_student.php';

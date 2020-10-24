@@ -87,6 +87,8 @@ switch ($action){
     case 'delete_student':
         $student_id = filter_input(INPUT_POST,'student_id', FILTER_SANITIZE_NUMBER_INT);
    
+        echo($student_id);
+        exit;
         $deleteStudent = deleteStudent($student_id);
 
 

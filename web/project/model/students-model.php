@@ -23,7 +23,7 @@ function insertNewStudent($student_reg_num,$student_fname,$student_lname,$studen
         echo($student_fname);
         echo($student_lname);
         echo($student_user_name);
-        echo($student_user_pas);
+        echo($student_user_pass);
 
         exit();
 

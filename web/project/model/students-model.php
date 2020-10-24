@@ -19,29 +19,9 @@ return $studentsInfo;
 
 function insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass){
         
-        echo($student_reg_num);
-        echo($student_fname);
-        echo($student_lname);
-        echo($student_user_name);
-        echo($student_user_pass);
-
-        exit();
-
+    
 $db = dbConnect();
-// $sql = "INSERT INTO students
-//         (students_reg_num,
-//         students_fname,
-//         students_lname,
-//         students_user_name,
-//         students_user_pass,
-//         students_user_level)
-//         VALUES(
-//         '5',
-//         'matias',
-//         'huamani',
-//         'mhuamani',
-//         'mhuamani',
-//         '1')";
+
 
 $sql = "INSERT INTO students
         (students_reg_num,

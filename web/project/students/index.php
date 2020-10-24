@@ -60,6 +60,8 @@ switch ($action){
         $student_lname = filter_input(INPUT_POST,'student_lname', FILTER_SANITIZE_STRING);
 
         $updateStudent = updateStudent($student_id,$student_reg_num,$student_fname,$student_lname);
+        echo($updateStudent);
+        exit;
 
         if(!empty($updateStudent)){
             $message = "The information has been updated";

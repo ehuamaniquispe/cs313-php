@@ -30,13 +30,13 @@ if(empty($user_level)){
         <form action="../students/index.php" method="POST">
 
             <label for="student_reg_num">#. Reg.</label><br>
-            <input type="text" name="student_reg_num" id="student_reg_num" required value="<?php if(isset($getStudentsInfoById[students_reg_num])){echo($getStudentsInfoById[students_reg_num]);}?> readonly"><br>
+            <input type="text" name="student_reg_num" id="student_reg_num" required value="<?php if(isset($getStudentsInfoById[students_reg_num])){echo($getStudentsInfoById[students_reg_num]);}?>" readonly><br>
             
             <label for="student_fname">First Name</label><br>
-            <input type="text" name="student_fname" id="student_fname" required value="<?php if(isset($getStudentsInfoById[students_fname])){echo($getStudentsInfoById[students_fname]);}?> readonly"><br>
+            <input type="text" name="student_fname" id="student_fname" required value="<?php if(isset($getStudentsInfoById[students_fname])){echo($getStudentsInfoById[students_fname]);}?>" readonly><br>
 
             <label for="student_lname">Last Name</label><br>
-            <input type="text" name="student_lname" id="student_lname" required value="<?php if(isset($getStudentsInfoById[students_lname])){echo($getStudentsInfoById[students_lname]);}?> readonly"><br>
+            <input type="text" name="student_lname" id="student_lname" required value="<?php if(isset($getStudentsInfoById[students_lname])){echo($getStudentsInfoById[students_lname]);}?>" readonly><br>
             
             <!-- <label for="student_user_name">User Name</label><br>
             <input type="text" name="student_user_name" id="student_user_name" required value="<?php if(isset($getStudentsInfoById[students_reg_num])){echo($getStudentsInfoById[students_reg_num]);}?>"><br> -->

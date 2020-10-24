@@ -77,7 +77,7 @@ $sql = "UPDATE students
         students_reg_num = :student_reg_num, 
         students_fname = :student_fname, 
         students_lname = :student_lname 
-        WHERE id_students = :student_id)";
+        WHERE id_students = :student_id";
 $stmt = $db->prepare($sql);
 $stmt->bindValue(':student_id',$student_id,PDO::PARAM_INT);
 $stmt->bindValue(':student_reg_num',$student_reg_num,PDO::PARAM_STR);
@@ -87,7 +87,5 @@ $stmt->execute();
 $rowChanged=$stmt->rowCount();
 $stmt->closeCursor();
 return $rowChanged;
-
-
 
 }

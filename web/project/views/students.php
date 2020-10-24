@@ -28,7 +28,11 @@ if(empty($user_level)){
         ?>
 
     <h1>Students</h1>
-    
+    <?php
+    if(isset($_SESSION['message'])){
+        echo($_SESSION['message']);
+    }
+    ?>
     <a href="../students/index.php?action=newStudent">New Student </a>
         <table class="table table-striped">
             <?php

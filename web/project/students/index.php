@@ -27,7 +27,14 @@ switch ($action){
         $student_user_pass = filter_input(INPUT_POST,'student_user_pass', FILTER_SANITIZE_STRING);
 
         $insertNewStudent = insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass);
-        echo($insertNewStudent);
+        if(empty($insertNewStudent)){
+            $_SESSION['message']= "the information couldn't be inserted";
+        }
+        else{
+            $_SESSION['message']= "the information was inserted";
+
+        }
+        header('location:../views/students.php');
 
     break;
 

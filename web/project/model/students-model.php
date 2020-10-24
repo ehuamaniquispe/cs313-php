@@ -18,11 +18,8 @@ return $studentsInfo;
 }
 
 function insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass){
-        
     
 $db = dbConnect();
-
-
 $sql = "INSERT INTO students
         (students_reg_num,
         students_fname,

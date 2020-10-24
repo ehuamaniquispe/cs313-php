@@ -29,16 +29,18 @@ switch ($action){
         $insertNewStudent = insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass);
         if(empty($insertNewStudent)){
             $_SESSION['message']= "the information couldn't be inserted";
+            include '../views/new_student.php';
+            exit();
         }
         else{
             $_SESSION['message']= "the information was inserted";
 
+            header('location:../students');
+            exit();
+
         }
-        header('location:../views/students.php');
 
     break;
-
-
 
     default:
     

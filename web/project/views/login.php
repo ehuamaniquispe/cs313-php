@@ -16,7 +16,7 @@
 <?php
 if(isset($_SESSION['message']))
 {
-  echo($_SESSION['message']);
+  echo("<b>". $_SESSION['message']. "</b>");
 }
 ?>
 <form action="../login/index.php" method="post">

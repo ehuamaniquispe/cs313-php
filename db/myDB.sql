@@ -47,11 +47,10 @@ CREATE TABLE IF NOT EXISTS "students_has_courses"(
 --------------------------------------------------------
 -- Foreign keys
 -- -----------------------------------------------------
-ALTER TABLE "courses" ADD FOREIGN KEY (teachers_id_teachers) REFERENCES "teachers" ("id_teachers");
+ALTER TABLE "courses" ADD FOREIGN KEY (teachers_id_teachers) REFERENCES "teachers" ("id_teachers") ON DELETE CASCADE;
+ALTER TABLE "students_has_courses" ADD FOREIGN KEY (students_id_students) REFERENCES "students" ("id_students") ON DELETE CASCADE;
+ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENCES "courses" ("id_courses") ON DELETE CASCADE;
 
-ALTER TABLE "students_has_courses" ADD FOREIGN KEY (students_id_students) REFERENCES "students" ("id_students");
-
-ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENCES "courses" ("id_courses");
 -- -----------------------------------------------------
 -- inserting data
 -- -----------------------------------------------------
@@ -170,6 +169,26 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   VALUES
   (1,
   1);
+
+   INSERT INTO students_has_courses
+  VALUES
+  (2,
+  1);
+
+   INSERT INTO students_has_courses
+  VALUES
+  (3,
+  1);
+
+     INSERT INTO students_has_courses
+  VALUES
+  (3,
+  2);
+
+   INSERT INTO students_has_courses
+  VALUES
+  (4,
+  2);
 
  
  

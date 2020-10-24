@@ -26,7 +26,9 @@ switch ($action){
         $student_user_name = filter_input(INPUT_POST,'student_user_name', FILTER_SANITIZE_STRING);
         $student_user_pass = filter_input(INPUT_POST,'student_user_pass', FILTER_SANITIZE_STRING);
 
-        $insertNewStudent = insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass);
+        $hashed_student_user_pass=password_hash($student_user_pass, PASSWORD_DEFAULT);
+
+        $insertNewStudent = insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$hashed_student_user_pass);
         if(empty($insertNewStudent)){
             $_SESSION['message']= "the information couldn't be inserted";
             include '../views/new_student.php';

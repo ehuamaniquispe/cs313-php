@@ -30,21 +30,21 @@ if(empty($user_level)){
         <form action="../students/index.php" method="POST">
 
             <label for="student_reg_num">#. Reg.</label><br>
-            <input type="text" name="student_reg_num" id="student_reg_num"><br>
+            <input type="text" name="student_reg_num" id="student_reg_num" required><br>
             
             <label for="student_fname">First Name</label><br>
-            <input type="text" name="student_fname" id="student_fname"><br>
+            <input type="text" name="student_fname" id="student_fname" required><br>
 
             <label for="student_lname">Last Name</label><br>
-            <input type="text" name="student_lname" id="student_lname"><br>
+            <input type="text" name="student_lname" id="student_lname" required><br>
             
             <label for="student_user_name">User Name</label><br>
-            <input type="text" name="student_user_name" id="student_user_name"><br>
+            <input type="text" name="student_user_name" id="student_user_name" required><br>
             
             <label for="student_user_pass">Password</label><br>
-            <input type="text" name="student_user_pass" id="student_user_pass"><br>
+            <input type="password" name="student_user_pass" id="student_user_pass" required><br>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit"><br>
             <input type="hidden" name="action" value="new_student">
         </form>
     </main>    

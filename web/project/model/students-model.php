@@ -30,7 +30,7 @@ $sql = 'SELECT
         WHERE id_students = :student_id';
 
 $stmt = $db->prepare($sql);
-$stms->bindValue('student_id',$student_id,PDO::PARAM_INT);
+$stmt->bindValue('student_id',$student_id,PDO::PARAM_INT);
 $stmt->execute();
 $studentsInfo = $stmt->fetch(PDO::FETCH_ASSOC);
 $stmt->closeCursor();

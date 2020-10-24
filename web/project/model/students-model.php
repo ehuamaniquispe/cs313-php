@@ -89,3 +89,17 @@ $stmt->closeCursor();
 return $rowChanged;
 
 }
+
+function deleteStudent($student_id){
+
+        $db = dbConnect();
+        $sql = "DELETE from students  WHERE id_students = :student_id";
+        
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':student_id',$student_id,PDO::PARAM_INT);
+        $stmt->execute();
+        $rowChanged=$stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowChanged;
+
+}

@@ -75,6 +75,36 @@ switch ($action){
 
 
     break;
+
+    case 'delete':
+        $student_id = filter_input(INPUT_GET,'student_id', FILTER_SANITIZE_NUMBER_INT);
+        $getStudentsInfoById=getStudentsInfoById($student_id);
+
+        include '../views/delete_student.php';
+
+    break;
+
+    case 'delete_student':
+        $student_id = filter_input(INPUT_POST,'student_id', FILTER_SANITIZE_NUMBER_INT);
+
+        $deleteStudent = deleteStudent($student_id);
+
+
+        if(!empty($deleteStudent)){
+            $message = "The information has been deleted";
+            $_SESSION['message']=$message;
+            header('location:../students');
+        }
+        else{
+            $message = "the information has NOT been deleted";
+            $_SESSION['message']=$message;
+            include '../students';
+        }
+
+
+    break;
+
+
     default:
     
     $getStudentsInfo=getStudentsInfo();

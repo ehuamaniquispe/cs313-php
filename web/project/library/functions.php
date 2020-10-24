@@ -17,8 +17,8 @@ function displayStudentsInfo($students)
         $tableStudents .= "<td> $student[students_reg_num] </td>";
         $tableStudents .= "<td> $student[students_fname] </td>";
         $tableStudents .= "<td> $student[students_lname]</td>";
-        $tableStudents .= "<td>  <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
-        // $tableStudents .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
+        // $tableStudents .= "<td>  <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
+        $tableStudents .= "<td>  <a href='../students/index.php?action=edit&student_id=$student[id_students]' title='edit'> EDIT </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
         $tableStudents .= '</tr>';
     }
     $tableStudents .= '</tbody>';

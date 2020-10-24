@@ -44,6 +44,13 @@ switch ($action){
 
     break;
 
+    case 'edit':
+        $student_id = filter_input(INPUT_GET,'student_id', FILTER_SANITIZE_NUMBER_INT);
+        $getStudentsInfoById=getStudentsInfoById($student_id);
+
+        include '../views/edit_student.php';
+    break;
+
     default:
     
     $getStudentsInfo=getStudentsInfo();

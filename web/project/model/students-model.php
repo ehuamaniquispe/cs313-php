@@ -17,6 +17,25 @@ $stmt->closeCursor();
 return $studentsInfo;
 }
 
+function getStudentsInfoById($student_id){
+
+$db = dbConnect();
+
+$sql = 'SELECT 
+        students_reg_num,
+        students_fname,
+        students_lname
+        FROM students
+        WHERE id_students = :student_id';
+
+$stmt = $db->prepare($sql);
+$stms->bindValue('student_id',$student_id,PDO::PARAM_INT);
+$stmt->execute();
+$studentsInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+$stmt->closeCursor();
+return $studentsInfo;
+}
+
 function insertNewStudent($student_reg_num,$student_fname,$student_lname,$student_user_name,$student_user_pass){
     
 $db = dbConnect();

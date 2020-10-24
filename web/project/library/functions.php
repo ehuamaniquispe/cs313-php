@@ -18,7 +18,7 @@ function displayStudentsInfo($students)
         $tableStudents .= "<td> $student[students_fname] </td>";
         $tableStudents .= "<td> $student[students_lname]</td>";
         // $tableStudents .= "<td>  <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
-        $tableStudents .= "<td>  <a href='../students/index.php?action=edit&student_id=$student[id_students]' title='edit'> EDIT </a> <a href=''../students/index.php?action=delete&student_id=$student[id_students]' title='delete'> DELETE </a></td>";
+        $tableStudents .= "<td>  <a href='../students/index.php?action=edit&student_id=$student[id_students]' title='edit'> EDIT </a> <a href='../students/index.php?action=delete&student_id=$student[id_students]' title='delete'> DELETE </a></td>";
         $tableStudents .= '</tr>';
     }
     $tableStudents .= '</tbody>';

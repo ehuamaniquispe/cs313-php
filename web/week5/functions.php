@@ -9,3 +9,10 @@ function displayScriptures($scripturesInfo)
 
     return $scripturesInfoDisplay;
 }
+
+function displayTopicList($topicInfo)
+{
+    $topicInfoDisplay = "<input type='checkbox' name='' id=''>";
+
+
+}

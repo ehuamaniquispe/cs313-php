@@ -13,15 +13,23 @@ require_once 'functions.php';
     <title>Document</title>
 </head>
 <body>
-<form>
+<form action="" method="POST">
 book
-<input type="text" name="book" id="book">
+<input type="text" name="book" id="book"> <br>
 Chapter
-<input type="text" name="chapter" id="chapter">
+<input type="text" name="chapter" id="chapter"> <br>
 Verser
-<input type="text" name="verse" id="verse">
+<input type="text" name="verse" id="verse"> <br>
 Content
 <textarea name="content" id="content"> </textarea>
+
+<?php
+$topicList = topicList();
+print_r($topicList);
+?>
+
+
+<input type="submit" value="SUBMIT">
 </form>        
 
 </body>

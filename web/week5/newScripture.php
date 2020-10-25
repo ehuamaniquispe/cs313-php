@@ -29,6 +29,7 @@ Content
 
 ?>
 <?php
+$topicList = topicList();
 $list="";
 foreach ($topicList as $topicLists){
 

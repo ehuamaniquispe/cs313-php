@@ -4,10 +4,10 @@ require_once 'model.php';
 require_once 'functions.php';
 
 
-$book = $_POST("book");
-$chapter = $_POST("chapter");
-$verse = $_POST("verse");
-$content = $_POST("content");
+$book = $_POST["book"];
+$chapter = $_POST["chapter"];
+$verse = $_POST["verse"];
+$content = $_POST["content"];
 
 
 echo($book);

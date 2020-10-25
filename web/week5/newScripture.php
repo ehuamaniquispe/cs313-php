@@ -24,8 +24,8 @@ Content
 <textarea name="content" id="content"> </textarea>
 
 <?php
-$topicList = topicList();
-print_r($topicList);
+// $topicList = topicList();
+// print_r($topicList);
 
 ?>
 <?php

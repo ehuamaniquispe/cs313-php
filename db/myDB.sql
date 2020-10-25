@@ -191,4 +191,29 @@ ALTER TABLE "students_has_courses" ADD FOREIGN KEY (courses_id_courses) REFERENC
   2);
 
  
- 
+ ---- week 6 ----
+ CREATE TABLE IF NOT EXISTS "topic" (
+  "id_topic"  SERIAL PRIMARY KEY,
+  "topic_name" VARCHAR(10) NOT NULL);
+
+  INSERT INTO topic
+  (topic_name)
+  VALUES
+  ('Faith');
+
+  INSERT INTO topic
+  (topic_name)
+  VALUES
+  ('Sacrifice');
+
+  INSERT INTO topic
+  (topic_name)
+  VALUES
+  ('Charity');
+
+  CREATE TABLE IF NOT EXISTS "scriptures_topics" (
+  "id_topic"   INTEGER,
+  "id_scriptures" INTEGER);
+
+ALTER TABLE "scriptures_topics" ADD FOREIGN KEY (id_topic) REFERENCES "topic" ("id_topic") ON DELETE CASCADE;
+ALTER TABLE "scriptures_topics" ADD FOREIGN KEY (id_scriptures) REFERENCES "scriptures" ("id") ON DELETE CASCADE;

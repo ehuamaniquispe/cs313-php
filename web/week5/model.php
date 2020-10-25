@@ -60,7 +60,7 @@ function insertScripture($book,$chapter,$verse,$content){
 	$stmt->bindValue(':content', $content, PDO::PARAM_STR);
 
     $stmt->execute();
-    $rowChanged = $stmt->rowCount;
+    $rowChanged = $stmt->insert_id;
     $stmt->closeCursor();
     return $rowChanged;
 }

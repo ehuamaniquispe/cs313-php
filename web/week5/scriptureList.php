@@ -9,7 +9,6 @@ $chapter = $_POST["chapter"];
 $verse = $_POST["verse"];
 $content = $_POST["content"];
 
-
 $insertScripture = insertScripture($book,$chapter,$verse,$content);
 
 echo($insertScripture);

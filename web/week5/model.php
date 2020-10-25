@@ -36,3 +36,31 @@ function topicList()
     return $topicList;
 
 }
+
+function insertScripture($book,$chapter,$verse,$content){
+
+    $db = dbConnect();
+
+    $sql = 'INSERT INTO scriptures
+    (book,
+     chapter,
+     verse,
+     content)
+    VALUES
+    (:book,
+     :chapter,
+     :verse,
+     :content)';
+
+	$stmt = $db->prepare($sql);
+
+	$stmt->bindValue(':book', $book, PDO::PARAM_STR);
+	$stmt->bindValue(':chapter', $chapter, PDO::PARAM_STR);
+	$stmt->bindValue(':verse', $verse, PDO::PARAM_STR);
+	$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+
+    $stmt->execute();
+    $rowChanged = $stmt->rowCount;
+    $stmt->closeCursor();
+    return $rowChanged;
+}

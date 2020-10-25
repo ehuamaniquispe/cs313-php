@@ -10,10 +10,10 @@ $verse = $_POST["verse"];
 $content = $_POST["content"];
 
 
-echo($book);
-echo($chapter);
-echo($verse);
-echo($content);
+$insertScripture = insertScripture($book,$chapter,$verse,$content);
+
+echo($insertScripture);
+
 
 
 ?>

@@ -26,7 +26,21 @@ Content
 <?php
 $topicList = topicList();
 print_r($topicList);
+
 ?>
+<?php
+$list="";
+foreach ($topicList as $topicLists){
+
+    $list.='<input type="checkbox" id="$topicLists[id_topic]" name="$topicLists[topic_name]" value="$topicLists[topic_name]">
+    <label for="$topicLists[topic_name]"> </label><br>';
+    // $list.="<input type='checkbox' id='$topicLists[id_topic]' name='$topicLists[topic_name]' value='$topicLists[topic_name]'>
+    // <label for='$topicLists[topic_name]'> </label><br>";
+
+}
+echo($list);
+?>
+
 
 
 <input type="submit" value="SUBMIT">

@@ -13,7 +13,7 @@ require_once 'functions.php';
     <title>Document</title>
 </head>
 <body>
-<form action="" method="POST">
+<form action="scriptureList.php" method="POST">
 book
 <input type="text" name="book" id="book"> <br>
 Chapter
@@ -30,21 +30,18 @@ Content
 ?>
 <?php
 $topicList = topicList();
-$list="";
+$list="<br>";
 foreach ($topicList as $topicLists){
 
     $list.='<input type="checkbox" id="$topicLists[topic_name]" name="$topicLists[topic_name]" value="$topicLists[topic_name]">
     <label for="$topicLists[topic_name]">'. $topicLists[topic_name] .'</label><br>';
-    // $list.="<input type='checkbox' id='$topicLists[id_topic]' name='$topicLists[topic_name]' value='$topicLists[topic_name]'>
-    // <label for='$topicLists[topic_name]'> </label><br>";
 
 }
 echo($list);
 ?>
 
-
-
 <input type="submit" value="SUBMIT">
+
 </form>        
 
 </body>

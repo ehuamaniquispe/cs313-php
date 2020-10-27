@@ -31,10 +31,10 @@ if(empty($user_level)){
 
             
             <label for="course_name">Course Name</label><br>
-            <input type="text" name="course_name" id="course_name" required value="<?php if(isset($geCoursessInfoById[courses_name])){echo($getCoursesInfoById[courses_name]);}?>"><br>
+            <input type="text" name="course_name" id="course_name" required value="<?php if(isset($getCoursessInfoById[courses_name])){echo($getCoursesInfoById[courses_name]);}?>"><br>
 
             <label for="course_section">Course Section</label><br>
-            <input type="text" name="course_section" id="course_section" required value="<?php if(isset($geCoursessInfoById[courses_section])){echo($getCoursesInfoById[courses_section]);}?>"><br>
+            <input type="text" name="course_section" id="course_section" required value="<?php if(isset($getCoursessInfoById[courses_section])){echo($getCoursesInfoById[courses_section]);}?>"><br>
 
             <label for="id_teachers">Choose the teacher</label><br>
             <?php
@@ -44,8 +44,8 @@ if(empty($user_level)){
             }
             ?>
             <br>
-            <input type="hidden" name="course_id" value="<?php if(isset($geCoursessInfoById[id_courses])){echo($getCoursesInfoById[id_courses]);}?>"><br>
-            <input type="submit" value="Submit"><br>
+            <input type="hidden" name="course_id" value="<?php if(isset($getCoursessInfoById[id_courses])){echo($getCoursesInfoById[id_courses]);}?>"><br>
+            <input type="submit" value="Edit"><br>
             <input type="hidden" name="action" value="new_course">
         </form>
     </main>    

@@ -59,6 +59,9 @@ switch ($action){
             $course_id = filter_input(INPUT_GET,'course_id', FILTER_SANITIZE_NUMBER_INT);
             
             $getCoursesInfoById=getCoursesInfoById($course_id);
+
+            $getTeachersInfo = getTeachersInfo();
+            $diplayTeachersDropList = diplayTeachersDropList($getTeachersInfo);
     
             include '../views/edit_course.php';
         break;

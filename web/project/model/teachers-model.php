@@ -66,7 +66,6 @@ function insertNewTeacher($teacher_fname,$teacher_lname,$teacher_user_name,$teac
         $db = dbConnect();
         $sql = "UPDATE teachers
                 SET 
-                teachers_reg_num = :teacher_reg_num, 
                 teachers_fname = :teacher_fname, 
                 teachers_lname = :teacher_lname 
                 WHERE id_teachers = :teacher_id";

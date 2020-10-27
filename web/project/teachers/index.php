@@ -57,11 +57,6 @@ switch ($action){
         $teacher_fname = filter_input(INPUT_POST,'teacher_fname', FILTER_SANITIZE_STRING);
         $teacher_lname = filter_input(INPUT_POST,'teacher_lname', FILTER_SANITIZE_STRING);
 
-        echo($teacher_id);
-        echo($teacher_fname);
-        echo($teacher_lname);
-        exit;
-        
         $updateTeacher = updateTeacher($teacher_id,$teacher_fname,$teacher_lname);
         
 //check if the information to be updated is the same as before

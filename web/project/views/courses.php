@@ -31,6 +31,7 @@ if(empty($user_level)){
         echo("<b>".$_SESSION['message']."</b>");
     }
     ?>
+    <br>
     <a href="../courses/index.php?action=newCourse">New Course</a>
     
         <table class="table table-striped">

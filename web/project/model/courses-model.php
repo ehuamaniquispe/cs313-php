@@ -11,6 +11,23 @@ function getCoursesInfo()
     return $coursesInfo;
 }
 
+function getCoursesInfoById($course_id){
+
+    $db = dbConnect();
+    
+    $sql = 'SELECT *
+            FROM courses
+            WHERE id_courses = :course_id';
+    
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue('course_id',$course_id,PDO::PARAM_INT);
+    $stmt->execute();
+    $coursesInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $coursesInfo;
+    }
+
+
 function studentsInCourse($courseId){
 
     $db = dbConnect();

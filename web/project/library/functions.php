@@ -65,7 +65,7 @@ function displayCoursesInfo($courses)
         $tableCourses .= "<td> $course[courses_name] </td>";
         $tableCourses .= "<td> $course[courses_section] </td>";
        
-        $tableCourses .= "<td> <a class='course-view' title='view'> VIEW </a> <a href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
+        $tableCourses .= "<td> <a class='course-view' course_id='$course[id_courses]' title='view'> VIEW </a> <a href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
         // $tableCourses .= "<td> <a href='../courses/index.php?action=viewDetail&courseId=$course[id_courses]' title='view'> VIEW </a> <a href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
       
         $tableCourses .= '</tr>';

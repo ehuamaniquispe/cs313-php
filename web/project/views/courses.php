@@ -26,6 +26,11 @@ if(empty($user_level)){
         include '../modules/navbar.php';
         ?>
     <h1>Courses</h1>
+    <?php
+    if(isset($_SESSION['message'])){
+        echo("<b>".$_SESSION['message']."</b>");
+    }
+    ?>
     <a href="../courses/index.php?action=newCourse">New Course</a>
     
         <table class="table table-striped">
@@ -39,3 +44,6 @@ if(empty($user_level)){
 include '../modules/js-links.php'; 
 ?>
 </html>
+<?php
+unset($_SESSION['message']);
+?>

@@ -26,6 +26,12 @@ if(empty($user_level)){
         include '../modules/navbar.php';
         ?>
     <h1>Teachers</h1>
+    <?php
+    if(isset($_SESSION['message'])){
+        echo("<b>".$_SESSION['message']."</b>");
+    }
+    ?>
+    <br>
     <a href="../teachers/index.php?action=newTeacher"> New Teacher </a>
     
         <table class="table table-striped">

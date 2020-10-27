@@ -17,7 +17,6 @@ function displayStudentsInfo($students)
         $tableStudents .= "<td> $student[students_reg_num] </td>";
         $tableStudents .= "<td> $student[students_fname] </td>";
         $tableStudents .= "<td> $student[students_lname]</td>";
-        // $tableStudents .= "<td>  <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
         $tableStudents .= "<td>  <a href='../students/index.php?action=edit&student_id=$student[id_students]' title='edit'> EDIT </a> <a href='../students/index.php?action=delete&student_id=$student[id_students]' title='delete'> DELETE </a></td>";
         $tableStudents .= '</tr>';
     }
@@ -40,7 +39,8 @@ function displayTeachersInfo($teachers)
         $tableTeachers .= '<tr>';
         $tableTeachers .= "<td> $teacher[teachers_fname] </td>";
         $tableTeachers .= "<td> $teacher[teachers_lname]</td>";
-        $tableTeachers .= "<td>  <a href='#' title='edit'> EDIT </a> <a href='#' 'title='delete'> DELETE </a></td>";
+        $tableTeachers .= "<td>  <a href='../teachers/index.php?action=edit&teacher_id=$teacher[id_teachers]' title='edit'> EDIT </a> <a href='../teachers/index.php?action=delete&teacher_id=$teacher[id_teachers]' title='delete'> DELETE </a></td>";
+       
         // $tableTeachers .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
         $tableTeachers .= '</tr>';
     }

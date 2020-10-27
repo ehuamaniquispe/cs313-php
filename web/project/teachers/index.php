@@ -43,6 +43,66 @@ switch ($action){
 
     break;
 
+    case 'edit':
+        $student_id = filter_input(INPUT_GET,'student_id', FILTER_SANITIZE_NUMBER_INT);
+        
+        $getStudentsInfoById=getStudentsInfoById($student_id);
+
+        include '../views/edit_student.php';
+    break;
+    
+    case 'edit_teacher':
+
+        $teacher_id = filter_input(INPUT_POST,'teacher_id', FILTER_SANITIZE_NUMBER_INT);
+        $teacher_fname = filter_input(INPUT_POST,'teacher_fname', FILTER_SANITIZE_STRING);
+        $teacher_lname = filter_input(INPUT_POST,'teacher_lname', FILTER_SANITIZE_STRING);
+
+        $updateTeacher = updateTeacher($teacher_id,$teacher_fname,$teacher_lname);
+        
+//check if the information to be updated is the same as before
+        if(!empty($updateTeacher)){
+            $message = "The information has been updated";
+            $_SESSION['message']=$message;
+            header('location:../teachers');
+        }
+        else{
+            $message = "the information has NOT been updated";
+            $_SESSION['message']=$message;
+            include '../teachers';
+        }
+
+
+    break;
+
+    case 'delete':
+        $teacher_id = filter_input(INPUT_GET,'teacher_id', FILTER_SANITIZE_NUMBER_INT);
+        $getTeachersInfoById=getTeachersInfoById($teacher_id);
+
+        include '../views/delete_teacher.php';
+
+    break;
+
+    case 'delete_teacher':
+        $teacher_id = filter_input(INPUT_POST,'teacher_id', FILTER_SANITIZE_NUMBER_INT);
+   
+        
+        $deleteTeacher = deleteTeacher($teacher_id);
+
+
+        if(!empty($deleteTeacher)){
+            $message = "The information has been deleted";
+            $_SESSION['message']=$message;
+            header('location:../teachers');
+        }
+        else{
+            $message = "the information has NOT been deleted";
+            $_SESSION['message']=$message;
+            include '../teachers';
+        }
+
+
+    break;
+
     default:
     
     $getTeachersInfo=getTeachersInfo();

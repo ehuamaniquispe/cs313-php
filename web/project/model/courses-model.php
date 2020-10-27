@@ -31,3 +31,27 @@ function studentsInCourse($courseId){
     $stmt->closeCursor();
     return $coursesDetail;
 }
+
+function insertNewCourse($course_name,$course_section,$id_teachers){
+
+    $db = dbConnect();
+    $sql = "INSERT INTO courses
+            (courses_name,
+            courses_section,
+            teachers_id_teachers)
+            VALUES(
+            :course_name,
+            :course_section,
+            :id_teachers)";
+
+    $stmt = $db->prepare($sql);
+    
+    $stmt->bindValue(':course_name',$course_name,PDO::PARAM_STR);
+    $stmt->bindValue(':course_section',$course_section,PDO::PARAM_STR);
+    $stmt->bindValue(':id_teachers',$id_teachers,PDO::PARAM_INT);
+    $stmt->execute();
+    $rowChanged=$stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowChanged;
+
+}

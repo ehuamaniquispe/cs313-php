@@ -105,6 +105,7 @@ function displayStudentsInCourse($courseInfo)
 function diplayTeachersDropList($getTeachersInfo){
 
     $teacherDropDown = "<select name='id_teachers'>";
+    $teacherDropDown.= "<option value=''>Select</option>";
     foreach($getTeachersInfo AS $getTeachersInfos)
     {
         $teacherDropDown.= "<option value='$getTeachersInfos[id_teachers]'>$getTeachersInfos[teachers_fname] $getTeachersInfos[teachers_lname] </option>";

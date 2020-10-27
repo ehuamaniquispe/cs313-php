@@ -30,19 +30,20 @@ if(empty($user_level)){
         <form action="../courses/index.php" method="POST">
 
             
-            <label for="course_name">First Name</label><br>
+            <label for="course_name">Course Name</label><br>
             <input type="text" name="course_name" id="course_name" required><br>
 
-            <label for="course_section">Last Name</label><br>
+            <label for="course_section">Course Section</label><br>
             <input type="text" name="course_section" id="course_section" required><br>
-            
+
+            <label for="id_teachers">Choose the teacher</label><br>
             <?php
             if(isset($diplayTeachersDropList)){
 
                 echo($diplayTeachersDropList);
             }
             ?>
-
+            <br>
             <input type="submit" value="Submit"><br>
             <input type="hidden" name="action" value="new_course">
         </form>

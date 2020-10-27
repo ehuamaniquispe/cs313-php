@@ -35,15 +35,19 @@ switch ($action){
         break;
     
         case 'new_course':
-            $course_reg_num = filter_input(INPUT_POST,'course_reg_num', FILTER_SANITIZE_STRING);
-            $course_fname = filter_input(INPUT_POST,'course_fname', FILTER_SANITIZE_STRING);
-            $course_lname = filter_input(INPUT_POST,'course_lname', FILTER_SANITIZE_STRING);
-            $course_user_name = filter_input(INPUT_POST,'course_user_name', FILTER_SANITIZE_STRING);
-            $course_user_pass = filter_input(INPUT_POST,'course_user_pass', FILTER_SANITIZE_STRING);
+            $course_name = filter_input(INPUT_POST,'course_name', FILTER_SANITIZE_STRING);
+            $course_section = filter_input(INPUT_POST,'course_section', FILTER_SANITIZE_STRING);
+            $id_teachers = filter_input(INPUT_POST,'id_teachers', FILTER_SANITIZE_NUMBER_INT);
+
+            echo($course_name);
+            echo($course_section);
+            echo($id_teachers);
+
+            exit;
+
+
     
-            $hashed_course_user_pass=password_hash($course_user_pass, PASSWORD_DEFAULT);
-    
-            $insertNewCourse = insertNewCourse($course_reg_num,$course_fname,$course_lname,$course_user_name,$hashed_course_user_pass);
+            $insertNewCourse = insertNewCourse($course_name,$course_section,$id_teachers);
             if(empty($insertNewCourse)){
                 $_SESSION['message']= "the information couldn't be inserted";
                 include '../views/new_course.php';

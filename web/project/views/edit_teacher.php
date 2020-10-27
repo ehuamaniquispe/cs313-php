@@ -42,6 +42,8 @@ if(empty($user_level)){
             <label for="teacher_user_pass">Password</label><br>
             <input type="password" name="teacher_user_pass" id="teacher_user_pass" required><br> -->
 
+
+            <input type="hidden" name="teacher_id" value="<?php if(isset($getTeachersInfoById[id_teachers])){echo($getTeachersInfoById[id_teachers]);}?>">
             <input type="submit" value="Submit"><br>
             <input type="hidden" name="action" value="new_teacher">
         </form>

@@ -122,8 +122,7 @@ switch ($action){
         break;
 
     default:
-    echo ("default");
-    exit;
+    
         
         $getCoursesInfo=getCoursesInfo();
         $displayCoursesInfo = displayCoursesInfo($getCoursesInfo);

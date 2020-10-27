@@ -75,9 +75,7 @@ function insertNewCourse($course_name,$course_section,$id_teachers){
 
 function updateCourse($course_id,$course_name,$course_section,$id_teachers){
 
-    $course_name
-    $course_section
-    $id_teachers
+    
 
     $db = dbConnect();
     $sql = "UPDATE courses

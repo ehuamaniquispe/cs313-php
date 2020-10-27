@@ -110,7 +110,7 @@ function diplayTeachersDropList($getTeachersInfo){
         $teacherDropDown.= "<option value='$getTeachersInfos[id_teachers]'>$getTeachersInfos[teachers_fname] $getTeachersInfos[teachers_lname] </option>";
 
     }
-    $teacherDropDown = "</select>";
+    $teacherDropDown .= "</select>";
     return $teacherDropDown;
 
 

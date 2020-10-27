@@ -17,7 +17,7 @@ if(empty($user_level)){
   include '../modules/head.php';
   ?>
 
-    <title>Edit Teacher</title>
+    <title>Delete Teacher</title>
     
 </head>
 <body>
@@ -25,16 +25,16 @@ if(empty($user_level)){
     <?php
         include '../modules/navbar.php';
         ?>
-    <h1>Edit Teacher</h1>
+    <h1>Delete Teacher</h1>
     
         <form action="../teachers/index.php" method="POST">
 
             
             <label for="teacher_fname">First Name</label><br>
-            <input type="text" name="teacher_fname" id="teacher_fname" required value="<?php if(isset($getTeachersInfoById[teachers_fname])){echo($getTeachersInfoById[teachers_fname]);}?>"><br>
+            <input type="text" name="teacher_fname" id="teacher_fname" required value="<?php if(isset($getTeachersInfoById[teachers_fname])){echo($getTeachersInfoById[teachers_fname]);}?>" readonly><br>
 
             <label for="teacher_lname">Last Name</label><br>
-            <input type="text" name="teacher_lname" id="teacher_lname" required value="<?php if(isset($getTeachersInfoById[teachers_lname])){echo($getTeachersInfoById[teachers_lname]);}?>"><br>
+            <input type="text" name="teacher_lname" id="teacher_lname" required value="<?php if(isset($getTeachersInfoById[teachers_lname])){echo($getTeachersInfoById[teachers_lname]);}?>" readonly><br>
             
             <!-- <label for="teacher_user_name">User Name</label><br>
             <input type="text" name="teacher_user_name" id="teacher_user_name" required><br>
@@ -44,8 +44,8 @@ if(empty($user_level)){
 
 
             <input type="hidden" name="teacher_id" value="<?php if(isset($getTeachersInfoById[id_teachers])){echo($getTeachersInfoById[id_teachers]);}?>">
-            <input type="submit" value="Edit"><br>
-            <input type="hidden" name="action" value="edit_teacher">
+            <input type="submit" value="Delete"><br>
+            <input type="hidden" name="action" value="delete_teacher">
         </form>
     </main>    
 </body>

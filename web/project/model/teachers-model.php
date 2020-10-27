@@ -17,21 +17,19 @@ function insertNewTeacher($teacher_fname,$teacher_lname,$teacher_user_name,$teac
     
     $db = dbConnect();
     $sql = "INSERT INTO teachers
-            (teachers_reg_num,
-            teachers_fname,
+            (teachers_fname,
             teachers_lname,
             teachers_user_name,
             teachers_user_pass,
             teachers_user_level)
             VALUES(
-            :teacher_reg_num,
             :teacher_fname,
             :teacher_lname,
             :teacher_user_name,
             :teacher_user_pass,
             DEFAULT)";
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':teacher_reg_num',$teacher_reg_num,PDO::PARAM_STR);
+    
     $stmt->bindValue(':teacher_fname',$teacher_fname,PDO::PARAM_STR);
     $stmt->bindValue(':teacher_lname',$teacher_lname,PDO::PARAM_STR);
     $stmt->bindValue(':teacher_user_name',$teacher_user_name,PDO::PARAM_STR);

@@ -26,6 +26,7 @@ if(empty($user_level)){
         include '../modules/navbar.php';
         ?>
     <h1>Teachers</h1>
+    <a href="../teachers/index.php?action=newTeacher"> New Teacher </a>
     
         <table class="table table-striped">
             <?php

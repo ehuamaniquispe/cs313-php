@@ -13,26 +13,33 @@ if ($action == NULL){
 switch ($action){
 
 
-    case 'checkCredentials':
-    //  $userName = filter_input(INPUT_POST,'userName', FILTER_SANITIZE_STRING);
-    //  $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
+    case 'newTeacher':
+        include '../views/new_teacher.php';
+    
 
-    //  $checkUser = checkUser($userName,$pass);
+    break;
 
-    //  if(empty($checkUser)){
-    //      echo("User not found");
-    //  }
-    //  else{
-    //      $_SESSION['userName'] = $userName;
-    //      $_SESSION['userLevel'] = $checkUser[user_level]; 
-    //     //   echo ($_SESSION['userLevel']);
-    //     header('location:../students'); 
-    //     // include'../students'; 
+    case 'new_teacher':
+        $teacher_fname = filter_input(INPUT_POST,'teacher_fname', FILTER_SANITIZE_STRING);
+        $teacher_lname = filter_input(INPUT_POST,'teacher_lname', FILTER_SANITIZE_STRING);
+        $teacher_user_name = filter_input(INPUT_POST,'teacher_user_name', FILTER_SANITIZE_STRING);
+        $teacher_user_pass = filter_input(INPUT_POST,'teacher_user_pass', FILTER_SANITIZE_STRING);
 
-    //  }
-    //  print_r($checkUser);
+        $hashed_teacher_user_pass=password_hash($teacher_user_pass, PASSWORD_DEFAULT);
 
-    // //  echo ($pass);
+        $insertNewTeacher = insertNewTeacher($teacher_fname,$teacher_lname,$teacher_user_name,$hashed_teacher_user_pass);
+        if(empty($insertNewTeacher)){
+            $_SESSION['message']= "the information couldn't be inserted";
+            include '../views/new_teacher.php';
+            exit();
+        }
+        else{
+            $_SESSION['message']= "the information was inserted";
+
+            header('location:../teachers');
+            exit();
+
+        }
 
     break;
 

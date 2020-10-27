@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-    $(".classView").click(function(){
+    $(".course-view").click(function(){
         console.log("me clikeo");
     })
 })

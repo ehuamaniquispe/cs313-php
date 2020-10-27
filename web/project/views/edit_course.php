@@ -46,7 +46,7 @@ if(empty($user_level)){
             <br>
             <input type="hidden" name="course_id" value="<?php if(isset($getCoursesInfoById[id_courses])){echo($getCoursesInfoById[id_courses]);}?>"><br>
             <input type="submit" value="Edit"><br>
-            <input type="hidden" name="action" value="new_course">
+            <input type="hidden" name="action" value="edit_course">
         </form>
     </main>    
 </body>

@@ -61,7 +61,7 @@ switch ($action){
             $getCoursesInfoById=getCoursesInfoById($course_id);
 
             $getTeachersInfo = getTeachersInfo();
-            $diplayTeachersDropList = diplayTeachersDropList($getTeachersInfo);
+            $diplayTeachersDropList = diplayTeachersDropList($getTeachersInfo,$getCoursesInfoById);
     
             include '../views/edit_course.php';
         break;

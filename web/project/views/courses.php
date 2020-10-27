@@ -34,7 +34,7 @@ if(empty($user_level)){
     <br>
     <a href="../courses/index.php?action=newCourse">New Course</a>
     
-        <table class="table table-striped">
+        <table class="table table-striped course-table">
             <?php
             echo($displayCoursesInfo);
             ?>

@@ -96,16 +96,16 @@ function updateCourse($course_id,$course_name,$course_section,$id_teachers){
     
     }
 
-    function deleteTeacher($teacher_id){
+//     function deleteTeacher($teacher_id){
 
-        $db = dbConnect();
-        $sql = "DELETE FROM teachers  WHERE id_teachers = :teacher_id";
+//         $db = dbConnect();
+//         $sql = "DELETE FROM teachers  WHERE id_teachers = :teacher_id";
         
-        $stmt = $db->prepare($sql);
-        $stmt->bindValue(':teacher_id',$teacher_id,PDO::PARAM_INT);
-        $stmt->execute();
-        $rowChanged=$stmt->rowCount();
-        $stmt->closeCursor();
-        return $rowChanged;
+//         $stmt = $db->prepare($sql);
+//         $stmt->bindValue(':teacher_id',$teacher_id,PDO::PARAM_INT);
+//         $stmt->execute();
+//         $rowChanged=$stmt->rowCount();
+//         $stmt->closeCursor();
+//         return $rowChanged;
 
-}
+// }

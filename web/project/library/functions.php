@@ -101,3 +101,16 @@ function displayStudentsInCourse($courseInfo)
 
 }
     
+// Display a drop-down list for teachers info
+function diplayTeachersDropList($getTeachersInfo){
+
+    $teacherDropDown = "<select name='id_teachers'>";
+    foreach($getTeachersInfo AS $getTeachersInfos)
+    {
+        $teacherDropDown.= "<option value='$getTeachersInfos[id_teachers]'>$getTeachersInfos[teachers_fname] $getTeachersInfos[teachers_lname] </option>";
+
+    }
+    $teacherDropDown = "</select>";
+
+
+}

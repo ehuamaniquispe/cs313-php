@@ -108,7 +108,7 @@ function diplayTeachersDropList($getTeachersInfo,$id_teachers=""){
     $teacherDropDown.= "<option value=''>Select</option>";
     foreach($getTeachersInfo AS $getTeachersInfos)
     {
-        if(!empty($id_teachers)){
+        if($id_teachers == getTeachersInfo[id_teachers]){
 
             $teacherDropDown.= "<option selected='selected' value='$getTeachersInfos[id_teachers]'>$getTeachersInfos[teachers_fname] $getTeachersInfos[teachers_lname] </option>";
         }

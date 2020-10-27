@@ -44,11 +44,11 @@ switch ($action){
     break;
 
     case 'edit':
-        $student_id = filter_input(INPUT_GET,'student_id', FILTER_SANITIZE_NUMBER_INT);
+        $teacher_id = filter_input(INPUT_GET,'teacher_id', FILTER_SANITIZE_NUMBER_INT);
         
-        $getStudentsInfoById=getStudentsInfoById($student_id);
+        $getTeachersInfoById=getTeachersInfoById($teacher_id);
 
-        include '../views/edit_student.php';
+        include '../views/edit_teacher.php';
     break;
     
     case 'edit_teacher':

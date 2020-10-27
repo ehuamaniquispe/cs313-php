@@ -20,7 +20,6 @@ function getTeachersInfoById($teacher_id){
     
     $sql = 'SELECT 
             id_teachers,
-            teachers_reg_num,
             teachers_fname,
             teachers_lname
             FROM teachers

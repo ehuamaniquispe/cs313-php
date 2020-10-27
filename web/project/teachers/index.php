@@ -46,7 +46,7 @@ switch ($action){
     case 'edit':
         $teacher_id = filter_input(INPUT_GET,'teacher_id', FILTER_SANITIZE_NUMBER_INT);
         
-        //$getTeachersInfoById=getTeachersInfoById($teacher_id);
+        $getTeachersInfoById=getTeachersInfoById($teacher_id);
 
         include '../views/edit_teacher.php';
     break;

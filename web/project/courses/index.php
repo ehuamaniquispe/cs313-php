@@ -38,14 +38,6 @@ switch ($action){
             $course_name = filter_input(INPUT_POST,'course_name', FILTER_SANITIZE_STRING);
             $course_section = filter_input(INPUT_POST,'course_section', FILTER_SANITIZE_STRING);
             $id_teachers = filter_input(INPUT_POST,'id_teachers', FILTER_SANITIZE_NUMBER_INT);
-
-            echo($course_name);
-            echo($course_section);
-            echo($id_teachers);
-
-            exit;
-
-
     
             $insertNewCourse = insertNewCourse($course_name,$course_section,$id_teachers);
             if(empty($insertNewCourse)){

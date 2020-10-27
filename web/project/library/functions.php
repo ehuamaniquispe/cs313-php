@@ -111,6 +111,7 @@ function diplayTeachersDropList($getTeachersInfo){
 
     }
     $teacherDropDown = "</select>";
+    return $teacherDropDown;
 
 
 }

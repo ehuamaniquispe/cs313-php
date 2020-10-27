@@ -3,6 +3,7 @@ function getTeachersInfo()
 {
     $db = dbConnect();
     $sql ='SELECT 
+            id_teachers,
             teachers_fname,
             teachers_lname
            FROM teachers';

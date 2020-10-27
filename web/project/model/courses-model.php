@@ -75,8 +75,6 @@ function insertNewCourse($course_name,$course_section,$id_teachers){
 
 function updateCourse($course_id,$course_name,$course_section,$id_teachers){
 
-    
-
     $db = dbConnect();
     $sql = "UPDATE courses
             SET 
@@ -88,7 +86,7 @@ function updateCourse($course_id,$course_name,$course_section,$id_teachers){
     $stmt->bindValue(':course_id',$course_id,PDO::PARAM_INT);
     $stmt->bindValue(':course_name',$course_name,PDO::PARAM_STR);
     $stmt->bindValue(':course_section',$course_section,PDO::PARAM_STR);
-    $stmt->bindValue(':id_teachers',$id_teachers,PDO::PARAM_STR);
+    $stmt->bindValue(':id_teachers',$id_teachers,PDO::PARAM_INT);
     $stmt->execute();
     $rowChanged=$stmt->rowCount();
     $stmt->closeCursor();

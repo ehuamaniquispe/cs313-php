@@ -45,7 +45,7 @@ if(empty($user_level)){
 
             <input type="hidden" name="teacher_id" value="<?php if(isset($getTeachersInfoById[id_teachers])){echo($getTeachersInfoById[id_teachers]);}?>">
             <input type="submit" value="Submit"><br>
-            <input type="hidden" name="action" value="new_teacher">
+            <input type="hidden" name="action" value="edit_teacher">
         </form>
     </main>    
 </body>

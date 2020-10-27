@@ -70,11 +70,12 @@ switch ($action){
         case 'edit_course':
     
             $course_id = filter_input(INPUT_POST,'course_id', FILTER_SANITIZE_NUMBER_INT);
-            $course_reg_num = filter_input(INPUT_POST,'course_reg_num', FILTER_SANITIZE_STRING);
-            $course_fname = filter_input(INPUT_POST,'course_fname', FILTER_SANITIZE_STRING);
-            $course_lname = filter_input(INPUT_POST,'course_lname', FILTER_SANITIZE_STRING);
-    
-            $updateCourse = updateCourse($course_id,$course_reg_num,$course_fname,$course_lname);
+            $course_name = filter_input(INPUT_POST,'course_name', FILTER_SANITIZE_STRING);
+            $course_section = filter_input(INPUT_POST,'course_section', FILTER_SANITIZE_STRING);
+            $id_teachers = filter_input(INPUT_POST,'id_teachers', FILTER_SANITIZE_NUMBER_INT);
+
+
+            $updateCourse = updateCourse($course_id,$course_name,$course_section,$id_teachers);
             
     //check if the information to be updated is the same as before
             if(!empty($updateCourse)){

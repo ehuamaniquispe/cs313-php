@@ -72,3 +72,42 @@ function insertNewCourse($course_name,$course_section,$id_teachers){
     return $rowChanged;
 
 }
+
+function updateCourse($course_id,$course_name,$course_section,$id_teachers){
+
+    $course_name
+    $course_section
+    $id_teachers
+
+    $db = dbConnect();
+    $sql = "UPDATE courses
+            SET 
+            courses_name= :course_name,
+            courses_section= :course_section,
+            teachers_id_teachers= :id_teachers 
+            WHERE id_courses = :course_id";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':course_id',$course_id,PDO::PARAM_INT);
+    $stmt->bindValue(':course_name',$course_name,PDO::PARAM_STR);
+    $stmt->bindValue(':course_section',$course_section,PDO::PARAM_STR);
+    $stmt->bindValue(':id_teachers',$id_teachers,PDO::PARAM_STR);
+    $stmt->execute();
+    $rowChanged=$stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowChanged;
+    
+    }
+
+    function deleteTeacher($teacher_id){
+
+        $db = dbConnect();
+        $sql = "DELETE FROM teachers  WHERE id_teachers = :teacher_id";
+        
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':teacher_id',$teacher_id,PDO::PARAM_INT);
+        $stmt->execute();
+        $rowChanged=$stmt->rowCount();
+        $stmt->closeCursor();
+        return $rowChanged;
+
+}

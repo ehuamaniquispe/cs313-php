@@ -36,7 +36,7 @@ if(empty($user_level)){
             <label for="course_section">Course Section</label><br>
             <input type="text" name="course_section" id="course_section" required value="<?php if(isset($getCoursesInfoById[courses_section])){echo($getCoursesInfoById[courses_section]);}?>" readonly><br>
 
-            <label for="id_teachers">Choose the teacher</label><br>
+            <label for="id_teachers">teacher</label><br>
             <?php
             if(isset($diplayTeachersDropList)){
 

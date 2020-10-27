@@ -95,6 +95,11 @@ switch ($action){
         case 'delete':
             $course_id = filter_input(INPUT_GET,'course_id', FILTER_SANITIZE_NUMBER_INT);
             $getCoursesInfoById=getCoursesInfoById($course_id);
+
+            $id_teachers=$getCoursesInfoById[teachers_id_teachers];
+
+            $getTeachersInfo = getTeachersInfo();
+            $diplayTeachersDropList = diplayTeachersDropList($getTeachersInfo,$id_teachers);
     
             include '../views/delete_course.php';
     

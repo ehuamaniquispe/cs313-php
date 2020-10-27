@@ -92,34 +92,34 @@ switch ($action){
     
         break;
     
-        case 'delete':
-            $course_id = filter_input(INPUT_GET,'course_id', FILTER_SANITIZE_NUMBER_INT);
-            $getCoursesInfoById=getCoursesInfoById($course_id);
+        // case 'delete':
+        //     $course_id = filter_input(INPUT_GET,'course_id', FILTER_SANITIZE_NUMBER_INT);
+        //     $getCoursesInfoById=getCoursesInfoById($course_id);
     
-            include '../views/delete_course.php';
+        //     include '../views/delete_course.php';
     
-        break;
+        // break;
     
-        case 'delete_course':
-            $course_id = filter_input(INPUT_POST,'course_id', FILTER_SANITIZE_NUMBER_INT);
+        // case 'delete_course':
+        //     $course_id = filter_input(INPUT_POST,'course_id', FILTER_SANITIZE_NUMBER_INT);
        
             
-            $deleteCourse = deleteCourse($course_id);
+        //     $deleteCourse = deleteCourse($course_id);
     
     
-            if(!empty($deleteCourse)){
-                $message = "The information has been deleted";
-                $_SESSION['message']=$message;
-                header('location:../courses');
-            }
-            else{
-                $message = "the information has NOT been deleted";
-                $_SESSION['message']=$message;
-                include '../courses';
-            }
+        //     if(!empty($deleteCourse)){
+        //         $message = "The information has been deleted";
+        //         $_SESSION['message']=$message;
+        //         header('location:../courses');
+        //     }
+        //     else{
+        //         $message = "the information has NOT been deleted";
+        //         $_SESSION['message']=$message;
+        //         include '../courses';
+        //     }
     
     
-        break;
+        // break;
 
     default:
     

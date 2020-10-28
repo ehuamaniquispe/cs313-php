@@ -12,13 +12,28 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-                console.log(data);
-                var course = JSON.parse(data);
-                console.log(course);
-                course.forEach(function (element) {
+                
+                let studentsInfo = JSON.parse(data);
 
-                    console.log(element.students_fname);
+                let tableStudentsCourses = '<thead>';
+                tableStudentsCourses += '<tr>';
+                tableStudentsCourses += '<th>#Reg.</th>';
+                tableStudentsCourses += '<th>Name</th>';
+                tableStudentsCourses += '<th>Last Name</th>';
+                tableStudentsCourses += '<th>User Name</th>';
+                tableStudentsCourses += '</tr>';
+                tableStudentsCourses += '</thead>';
+                tableStudentsCourses += '<tbody>';
 
+                studentsInfo.forEach(function (element) {
+
+                            tableStudentsCourses += '<tr>';
+                            tableStudentsCourses += "<td>"+ studentsInfo.students_reg_num +"</td>";
+                            tableStudentsCourses += "<td>"+ studentsInfo.students_fname +"</td>";
+                            tableStudentsCourses += "<td>"+ studentsInfo.students_lname +"</td>";
+                            tableStudentsCourses += "<td>"+ studentsInfo.students_user_name +"</td>";
+                            tableStudentsCourses += '</tr>';
+                        
                     // nombreEstudiantes += '<a class="dropdown-item links-resultados" href="#" data-id ="';
                     // nombreEstudiantes += element.estudianteId;
                     // nombreEstudiantes += '">';
@@ -30,9 +45,11 @@ $(document).ready(function(){
                     // nombreEstudiantes += element.estudianteApellidoMaterno;
                     // nombreEstudiantes += '</a>';
         
-        
-        
                 })
+                tableStudentsCourses += '</tbody>';
+
+                $(".course-detail").show();
+                nombresAlumnosDisplay.innerHTML = tableStudentsCourses;
               
             });
 

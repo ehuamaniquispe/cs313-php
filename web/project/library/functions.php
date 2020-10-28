@@ -69,6 +69,11 @@ function displayCoursesInfo($courses)
         // $tableCourses .= "<td> <a href='../courses/index.php?action=viewDetail&courseId=$course[id_courses]' title='view'> VIEW </a> <a href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
       
         $tableCourses .= '</tr>';
+
+        $tableCourses .= "<tr class='course-detail'>";
+        $tableCourses .= "</tr>";
+
+
     }
     $tableCourses .= '</tbody>';
 

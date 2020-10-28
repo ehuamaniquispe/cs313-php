@@ -14,7 +14,7 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-              console.log(data);
+              console.log(data[students_fname]);
             });
 
     })

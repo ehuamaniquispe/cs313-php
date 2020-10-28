@@ -12,8 +12,26 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-              let dat = data[students_fname];
-              console.log(dat);
+
+                data.forEach(function (element) {
+
+                    console.log(element.students_fname);
+
+                    // nombreEstudiantes += '<a class="dropdown-item links-resultados" href="#" data-id ="';
+                    // nombreEstudiantes += element.estudianteId;
+                    // nombreEstudiantes += '">';
+                    // nombreEstudiantes += '&nbsp';
+                    // nombreEstudiantes += element.estudianteNombres;
+                    // nombreEstudiantes += '&nbsp';
+                    // nombreEstudiantes += element.estudianteApellidoPaterno;
+                    // nombreEstudiantes += '&nbsp';
+                    // nombreEstudiantes += element.estudianteApellidoMaterno;
+                    // nombreEstudiantes += '</a>';
+        
+        
+        
+                })
+              
             });
 
     })

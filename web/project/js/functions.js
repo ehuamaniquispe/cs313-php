@@ -21,6 +21,7 @@ $(document).ready(function(){
             .done(function(data) {
                 
                 let studentsInfo = JSON.parse(data);
+                console.log(studentsInfo);
 
                 let tableStudentsCourses = '<thead>';
                 tableStudentsCourses += '<tr>';
@@ -32,13 +33,13 @@ $(document).ready(function(){
                 tableStudentsCourses += '</thead>';
                 tableStudentsCourses += '<tbody>';
 
-                studentsInfo.forEach(function (element) {
+                studentInfo.forEach(function (element) {
 
                             tableStudentsCourses += '<tr>';
-                            tableStudentsCourses += "<td>"+ studentsInfo.students_reg_num +"</td>";
-                            tableStudentsCourses += "<td>"+ studentsInfo.students_fname +"</td>";
-                            tableStudentsCourses += "<td>"+ studentsInfo.students_lname +"</td>";
-                            tableStudentsCourses += "<td>"+ studentsInfo.students_user_name +"</td>";
+                            tableStudentsCourses += "<td>"+ studentInfo.students_reg_num +"</td>";
+                            tableStudentsCourses += "<td>"+ studentInfo.students_fname +"</td>";
+                            tableStudentsCourses += "<td>"+ studentInfo.students_lname +"</td>";
+                            tableStudentsCourses += "<td>"+ studentInfo.students_user_name +"</td>";
                             tableStudentsCourses += '</tr>';
                         
                     // nombreEstudiantes += '<a class="dropdown-item links-resultados" href="#" data-id ="';

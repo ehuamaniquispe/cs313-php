@@ -12,10 +12,8 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-                for(x of data){
-
-                    console.log(x.students_fname);
-                }
+              let data = json_decode(data);
+              console.log(data);
             });
 
     })

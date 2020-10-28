@@ -4,6 +4,8 @@ $(document).ready(function(){
     $(".course-view").click(function(){
 
         let display =  $("#courseDetail").css("display");
+
+console.log(display);
         if(display=="none")
         {
             $("#courseDetail").attr("style", "display:block");
@@ -11,6 +13,8 @@ $(document).ready(function(){
         else{
             $("#courseDetail").attr("style", "display:none");
         }
+
+
 
         // if ($("#courseDetail").style.display === 'none') {
         //     $("#courseDetail").style.display = 'block';

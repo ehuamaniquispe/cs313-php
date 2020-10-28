@@ -2,6 +2,13 @@ $(document).ready(function(){
 
 
     $(".course-view").click(function(){
+
+        if ($(this).style.display === 'none') {
+            $(this).style.display = 'block';
+        } else {
+            $(this).style.display = 'none';
+        }
+
         
         let courseId = $(this).attr("course_id");
         console.log(courseId);
@@ -48,7 +55,7 @@ $(document).ready(function(){
                 })
                 tableStudentsCourses += '</tbody>';
 
-                $(".course-detail").show();
+                
                 nombresAlumnosDisplay.innerHTML = tableStudentsCourses;
               
             });

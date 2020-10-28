@@ -3,11 +3,17 @@ $(document).ready(function(){
 
     $(".course-view").click(function(){
 
-        if ($("#courseDetail").style.display === 'none') {
-            $("#courseDetail").style.display = 'block';
-        } else {
-            $("#courseDetail").style.display = 'none';
+        let display =  $("#courseDetail").css("display");
+        if(display!="none")
+        {
+            $("#courseDetail").attr("style", "display:none");
         }
+
+        // if ($("#courseDetail").style.display === 'none') {
+        //     $("#courseDetail").style.display = 'block';
+        // } else {
+        //     $("#courseDetail").style.display = 'none';
+        // }
 
         // $("#courseDetail").toggle();
 
@@ -26,7 +32,7 @@ $(document).ready(function(){
                 console.log(studentsInfo);
 
                 let tableStudentsCourses = '<b> Course Detail </b> <br>';
-                tableStudentsCourses = '<table class="table table-striped ">';
+                tableStudentsCourses += '<table class="table table-striped ">';
                 tableStudentsCourses += '<thead>';
                 tableStudentsCourses += '<tr>';
                 tableStudentsCourses += '<th>#Reg.</th>';

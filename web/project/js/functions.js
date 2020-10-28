@@ -49,17 +49,6 @@ $(document).ready(function(){
                             tableStudentsCourses += "<td>"+ element.students_lname +"</td>";
                             tableStudentsCourses += "<td>"+ element.students_user_name +"</td>";
                             tableStudentsCourses += '</tr>';
-                        
-                    // nombreEstudiantes += '<a class="dropdown-item links-resultados" href="#" data-id ="';
-                    // nombreEstudiantes += element.estudianteId;
-                    // nombreEstudiantes += '">';
-                    // nombreEstudiantes += '&nbsp';
-                    // nombreEstudiantes += element.estudianteNombres;
-                    // nombreEstudiantes += '&nbsp';
-                    // nombreEstudiantes += element.estudianteApellidoPaterno;
-                    // nombreEstudiantes += '&nbsp';
-                    // nombreEstudiantes += element.estudianteApellidoMaterno;
-                    // nombreEstudiantes += '</a>';
         
                 })
                 tableStudentsCourses += '</tbody>';

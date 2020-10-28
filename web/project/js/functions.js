@@ -12,8 +12,8 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-              let data = json_decode(data);
-              console.log(data);
+              let dat = json_decode(data);
+              var_dump(dat);
             });
 
     })

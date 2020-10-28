@@ -18,7 +18,7 @@ switch ($action){
         $courseId = filter_input(INPUT_POST,'courseId', FILTER_SANITIZE_NUMBER_INT);
         $studentsInCourse = studentsInCourse($courseId);
         
-        $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
+        // $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
         
 
         // include '../views/courseDetail.php';

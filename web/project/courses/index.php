@@ -15,14 +15,13 @@ switch ($action){
 
     case 'viewDetail':
        
-        $courseId = filter_input(INPUT_GET,'courseId', FILTER_SANITIZE_NUMBER_INT);
+        $courseId = filter_input(INPUT_POST,'courseId', FILTER_SANITIZE_NUMBER_INT);
         $studentsInCourse = studentsInCourse($courseId);
-        // print_r($studentsInCourse);
+        
         $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
-        // echo($displayStudentsInCourse);
-        // exit();
+        
 
-        include '../views/courseDetail.php';
+        // include '../views/courseDetail.php';
 
         break;
 

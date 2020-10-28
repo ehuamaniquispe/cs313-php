@@ -57,7 +57,7 @@ $(document).ready(function(){
                 tableStudentsCourses += '</tbody>';
                
                 
-                $("#courseDetail").innerHTML = tableStudentsCourses;
+                $("#courseDetail").html(tableStudentsCourses);
               
             });
 

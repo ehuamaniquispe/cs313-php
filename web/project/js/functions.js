@@ -9,6 +9,8 @@ $(document).ready(function(){
         //     $(this).style.display = 'none';
         // }
 
+        $("#courseDetail").toggle();
+
         
         let courseId = $(this).attr("course_id");
        
@@ -23,7 +25,8 @@ $(document).ready(function(){
                 let studentsInfo = JSON.parse(data);
                 console.log(studentsInfo);
 
-                let tableStudentsCourses = '<thead>';
+                let tableStudentsCourses = ' <table class="table table-striped ">';
+                tableStudentsCourses += '<thead>';
                 tableStudentsCourses += '<tr>';
                 tableStudentsCourses += '<th>#Reg.</th>';
                 tableStudentsCourses += '<th>Name</th>';
@@ -55,6 +58,7 @@ $(document).ready(function(){
         
                 })
                 tableStudentsCourses += '</tbody>';
+                tableStudentsCourses += '</table>';
                
                 
                 $("#courseDetail").html(tableStudentsCourses);

@@ -5,7 +5,7 @@ $(document).ready(function(){
 
         let display =  $("#courseDetail").css("display");
 
-console.log(display);
+
         if(display=="none")
         {
             $("#courseDetail").attr("style", "display:block");
@@ -15,16 +15,6 @@ console.log(display);
         }
 
 
-
-        // if ($("#courseDetail").style.display === 'none') {
-        //     $("#courseDetail").style.display = 'block';
-        // } else {
-        //     $("#courseDetail").style.display = 'none';
-        // }
-
-        // $("#courseDetail").toggle();
-
-        
         let courseId = $(this).attr("course_id");
        
 
@@ -39,6 +29,7 @@ console.log(display);
                 console.log(studentsInfo);
 
                 let tableStudentsCourses = '<b> Course Detail </b> <br>';
+                tableStudentsCourses += '<b> Students List </b> <br>';
                 tableStudentsCourses += '<table class="table table-striped ">';
                 tableStudentsCourses += '<thead>';
                 tableStudentsCourses += '<tr>';

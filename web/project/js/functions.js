@@ -12,7 +12,7 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-              let dat = data.length;
+              let dat = data[students_fname];
               console.log(dat);
             });
 

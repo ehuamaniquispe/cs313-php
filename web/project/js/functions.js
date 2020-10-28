@@ -12,8 +12,10 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-
-                data.forEach(function (element) {
+                console.log(data);
+                var course = JSON.parse(data);
+                console.log(course);
+                course.forEach(function (element) {
 
                     console.log(element.students_fname);
 

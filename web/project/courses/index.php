@@ -17,6 +17,8 @@ switch ($action){
        
         $courseId = filter_input(INPUT_POST,'courseId', FILTER_SANITIZE_NUMBER_INT);
         $studentsInCourse = studentsInCourse($courseId);
+        echo json_encode($studentsInCourse);
+        exit;
         
         // $displayStudentsInCourse = displayStudentsInCourse($studentsInCourse);
         

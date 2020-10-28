@@ -13,7 +13,7 @@ $(document).ready(function(){
             url: "../courses/index.php",
             data: { action: "viewDetail", courseId: courseId }
           })
-            .done(function( data ) {
+            .done(function(data) {
               console.log(data);
             });
 

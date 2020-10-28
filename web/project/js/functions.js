@@ -54,9 +54,9 @@ $(document).ready(function(){
         
                 })
                 tableStudentsCourses += '</tbody>';
-
+               
                 
-                nombresAlumnosDisplay.innerHTML = tableStudentsCourses;
+                $(".course-detail").innerHTML = tableStudentsCourses;
               
             });
 

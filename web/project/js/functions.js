@@ -12,7 +12,7 @@ $(document).ready(function(){
             data: { action: "viewDetail", courseId: courseId }
           })
             .done(function(data) {
-              let dat = json_decode(data);
+              let dat = data.length;
               var_dump(dat);
             });
 

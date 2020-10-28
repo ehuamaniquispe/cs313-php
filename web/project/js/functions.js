@@ -3,16 +3,16 @@ $(document).ready(function(){
 
     $(".course-view").click(function(){
 
-        let display =  $("#courseDetail").css("display");
+        // let display =  $("#courseDetail").css("display");
 
 
-        if(display=="none")
-        {
-            $("#courseDetail").attr("style", "display:block");
-        }
-        else{
-            $("#courseDetail").attr("style", "display:none");
-        }
+        // if(display=="none")
+        // {
+        //     $("#courseDetail").attr("style", "display:block");
+        // }
+        // else{
+        //     $("#courseDetail").attr("style", "display:none");
+        // }
 
 
         let courseId = $(this).attr("course_id");

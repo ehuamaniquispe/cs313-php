@@ -13,7 +13,7 @@ $(document).ready(function(){
           })
             .done(function(data) {
               let dat = data.length;
-              var_dump(dat);
+              console.log(dat);
             });
 
     })

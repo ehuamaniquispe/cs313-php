@@ -20,15 +20,17 @@ if(isset($_SESSION['message']))
 }
 ?>
 <form action="../login/index.php" method="post">
+  <div class="form-group">
+      <label for="userName" >User Name </label>
+      <input type="text" id="userName" name="userName" requiered>
+  </div>
+  <div class="form-group">
+      <label for="pass" >Password </label>
+      <input type="password" id="pass" name="pass" requiered>
+  </div>
 
-    <label for="userName" >User Name </label>
-    <input type="text" id="userName" name="userName" requiered>
-    <br>
-    <label for="pass" >Password </label>
-    <input type="password" id="pass" name="pass" requiered>
-    <br>
-    <input type="submit" value="log in">
-    <input type="hidden" name="action" value="checkCredentials">
+      <input class="btn btn-default" type="submit" value="log in">
+      <input type="hidden" name="action" value="checkCredentials">
     
 </form>
 </main>

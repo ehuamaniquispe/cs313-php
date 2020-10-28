@@ -33,13 +33,13 @@ $(document).ready(function(){
                 tableStudentsCourses += '</thead>';
                 tableStudentsCourses += '<tbody>';
 
-                studentInfo.forEach(function (element) {
+                studentsInfo.forEach(function (element) {
 
                             tableStudentsCourses += '<tr>';
-                            tableStudentsCourses += "<td>"+ studentInfo.students_reg_num +"</td>";
-                            tableStudentsCourses += "<td>"+ studentInfo.students_fname +"</td>";
-                            tableStudentsCourses += "<td>"+ studentInfo.students_lname +"</td>";
-                            tableStudentsCourses += "<td>"+ studentInfo.students_user_name +"</td>";
+                            tableStudentsCourses += "<td>"+ element.students_reg_num +"</td>";
+                            tableStudentsCourses += "<td>"+ element.students_fname +"</td>";
+                            tableStudentsCourses += "<td>"+ element.students_lname +"</td>";
+                            tableStudentsCourses += "<td>"+ element.students_user_name +"</td>";
                             tableStudentsCourses += '</tr>';
                         
                     // nombreEstudiantes += '<a class="dropdown-item links-resultados" href="#" data-id ="';

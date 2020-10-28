@@ -39,6 +39,8 @@ if(empty($user_level)){
             echo($displayCoursesInfo);
             ?>
         </table>
+
+        <div id="courseDetail"></div>
     </main>    
 </body>
 <?php

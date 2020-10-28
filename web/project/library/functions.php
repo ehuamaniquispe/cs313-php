@@ -70,8 +70,7 @@ function displayCoursesInfo($courses)
       
         $tableCourses .= '</tr>';
 
-        $tableCourses .= "<tr class='course-detail'>";
-        $tableCourses .= "</tr>";
+        
 
 
     }

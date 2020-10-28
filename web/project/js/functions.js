@@ -3,13 +3,13 @@ $(document).ready(function(){
 
     $(".course-view").click(function(){
 
-        // if ($(this).style.display === 'none') {
-        //     $(this).style.display = 'block';
-        // } else {
-        //     $(this).style.display = 'none';
-        // }
+        if ($("#courseDetail").style.display === 'none') {
+            $("#courseDetail").style.display = 'block';
+        } else {
+            $("#courseDetail").style.display = 'none';
+        }
 
-        $("#courseDetail").toggle();
+        // $("#courseDetail").toggle();
 
         
         let courseId = $(this).attr("course_id");
@@ -25,7 +25,8 @@ $(document).ready(function(){
                 let studentsInfo = JSON.parse(data);
                 console.log(studentsInfo);
 
-                let tableStudentsCourses = ' <table class="table table-striped ">';
+                let tableStudentsCourses = '<b> Course Detail </b> <br>';
+                tableStudentsCourses = '<table class="table table-striped ">';
                 tableStudentsCourses += '<thead>';
                 tableStudentsCourses += '<tr>';
                 tableStudentsCourses += '<th>#Reg.</th>';

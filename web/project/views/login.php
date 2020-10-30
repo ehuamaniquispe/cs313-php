@@ -22,11 +22,11 @@ if(isset($_SESSION['message']))
 <form action="../login/index.php" method="post">
   <div class="form-group">
       <label for="userName" >User Name </label>
-      <input type="text" id="userName" name="userName" requiered>
+      <input type="text" class="form-control" id="userName" name="userName" requiered>
   </div>
   <div class="form-group">
       <label for="pass" >Password </label>
-      <input type="password" id="pass" name="pass" requiered>
+      <input type="password" class="form-control" id="pass" name="pass" requiered>
   </div>
 
       <input class="btn btn-success" type="submit" value="log in">

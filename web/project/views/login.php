@@ -19,20 +19,22 @@ if(isset($_SESSION['message']))
   echo("<b>". $_SESSION['message']. "</b>");
 }
 ?>
-<form action="../login/index.php" method="post">
-  <div class="form-group">
-      <label for="userName" >User Name </label>
-      <input type="text" class="form-control" id="userName" name="userName" requiered>
-  </div>
-  <div class="form-group">
-      <label for="pass" >Password </label>
-      <input type="password" class="form-control" id="pass" name="pass" requiered>
-  </div>
+<div class="container">
+  <form action="../login/index.php" method="post">
+    <div class="form-group">
+        <label for="userName" >User Name </label>
+        <input type="text" class="form-control" id="userName" name="userName" requiered>
+    </div>
+    <div class="form-group">
+        <label for="pass" >Password </label>
+        <input type="password" class="form-control" id="pass" name="pass" requiered>
+    </div>
 
-      <input class="btn btn-success" type="submit" value="log in">
-      <input type="hidden" name="action" value="checkCredentials">
-    
-</form>
+        <input class="btn btn-success" type="submit" value="log in">
+        <input type="hidden" name="action" value="checkCredentials">
+
+  </form>
+</div>
 </main>
     
 </body>

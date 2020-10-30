@@ -22,25 +22,27 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
-    <?php
-        include '../modules/navbar.php';
-        ?>
-    <h1>Courses</h1>
-    <?php
-    if(isset($_SESSION['message'])){
-        echo("<b>".$_SESSION['message']."</b>");
-    }
-    ?>
-    <br>
-    <a href="../courses/index.php?action=newCourse">New Course</a>
-    
-        <table class="table table-striped course-table">
-            <?php
-            echo($displayCoursesInfo);
+    <div class="container">
+        <?php
+            include '../modules/navbar.php';
             ?>
-        </table>
+        <h1>Courses</h1>
+        <?php
+        if(isset($_SESSION['message'])){
+            echo("<b>".$_SESSION['message']."</b>");
+        }
+        ?>
+        <br>
+        <a class="btn btn-primary" href="../courses/index.php?action=newCourse">New Course</a>
+        
+            <table class="table table-striped course-table">
+                <?php
+                echo($displayCoursesInfo);
+                ?>
+            </table>
 
-        <div id="courseDetail"></div>
+            <div id="courseDetail"></div>
+    <div >
     </main>    
 </body>
 <?php

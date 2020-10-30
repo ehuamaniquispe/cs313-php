@@ -29,7 +29,7 @@ if(isset($_SESSION['message']))
       <input type="password" id="pass" name="pass" requiered>
   </div>
 
-      <input class="btn btn-default" type="submit" value="log in">
+      <input class="btn btn-success" type="submit" value="log in">
       <input type="hidden" name="action" value="checkCredentials">
     
 </form>

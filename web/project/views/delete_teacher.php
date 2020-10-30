@@ -22,6 +22,7 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
+    <div class="container">
     <?php
         include '../modules/navbar.php';
         ?>
@@ -29,12 +30,14 @@ if(empty($user_level)){
     
         <form action="../teachers/index.php" method="POST">
 
-            
+            <div class="form-group">
             <label for="teacher_fname">First Name</label><br>
-            <input type="text" name="teacher_fname" id="teacher_fname" required value="<?php if(isset($getTeachersInfoById[teachers_fname])){echo($getTeachersInfoById[teachers_fname]);}?>" readonly><br>
-
+            <input type="text" class="form-control" name="teacher_fname" id="teacher_fname" required value="<?php if(isset($getTeachersInfoById[teachers_fname])){echo($getTeachersInfoById[teachers_fname]);}?>" readonly><br>
+            </div>
+            <div class="form-group">
             <label for="teacher_lname">Last Name</label><br>
-            <input type="text" name="teacher_lname" id="teacher_lname" required value="<?php if(isset($getTeachersInfoById[teachers_lname])){echo($getTeachersInfoById[teachers_lname]);}?>" readonly><br>
+            <input type="text" class="form-control" name="teacher_lname" id="teacher_lname" required value="<?php if(isset($getTeachersInfoById[teachers_lname])){echo($getTeachersInfoById[teachers_lname]);}?>" readonly><br>
+            </div>
             
             <!-- <label for="teacher_user_name">User Name</label><br>
             <input type="text" name="teacher_user_name" id="teacher_user_name" required><br>
@@ -47,6 +50,7 @@ if(empty($user_level)){
             <input type="submit" value="Delete"><br>
             <input type="hidden" name="action" value="delete_teacher">
         </form>
+    </div>
     </main>    
 </body>
 <?php

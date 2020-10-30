@@ -22,6 +22,8 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
+    <div class="container">
+
     <?php
         include '../modules/navbar.php';
         ?>
@@ -29,12 +31,15 @@ if(empty($user_level)){
     
         <form action="../courses/index.php" method="POST">
 
+        <div class="form-group">
             
             <label for="course_name">Course Name</label><br>
-            <input type="text" name="course_name" id="course_name" required><br>
-
+            <input type="text" class="form-control" name="course_name" id="course_name" required><br>
+        </div>
+        <div class="form-group">
             <label for="course_section">Course Section</label><br>
-            <input type="text" name="course_section" id="course_section" required><br>
+            <input type="text" class="form-control" name="course_section" id="course_section" required><br>
+        </div>
 
             <label for="id_teachers">Choose the teacher</label><br>
             <?php
@@ -47,6 +52,7 @@ if(empty($user_level)){
             <input type="submit" value="Submit"><br>
             <input type="hidden" name="action" value="new_course">
         </form>
+        </div>
     </main>    
 </body>
 <?php

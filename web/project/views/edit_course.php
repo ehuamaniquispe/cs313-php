@@ -22,6 +22,7 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
+    <div class="container">
     <?php
         include '../modules/navbar.php';
         ?>
@@ -29,13 +30,16 @@ if(empty($user_level)){
     
         <form action="../courses/index.php" method="POST">
 
-            
+        <div class="form-group">  
             <label for="course_name">Course Name</label><br>
-            <input type="text" name="course_name" id="course_name" required value="<?php if(isset($getCoursesInfoById[courses_name])){echo($getCoursesInfoById[courses_name]);}?>"><br>
+            <input type="text" class="form-control"name="course_name" id="course_name" required value="<?php if(isset($getCoursesInfoById[courses_name])){echo($getCoursesInfoById[courses_name]);}?>"><br>
+        </div>
 
+        <div class="form-group">  
             <label for="course_section">Course Section</label><br>
-            <input type="text" name="course_section" id="course_section" required value="<?php if(isset($getCoursesInfoById[courses_section])){echo($getCoursesInfoById[courses_section]);}?>"><br>
+            <input type="text" class="form-control"name="course_section" id="course_section" required value="<?php if(isset($getCoursesInfoById[courses_section])){echo($getCoursesInfoById[courses_section]);}?>"><br>
 
+        </div>
             <label for="id_teachers">Choose the teacher</label><br>
             <?php
             if(isset($diplayTeachersDropList)){
@@ -48,6 +52,7 @@ if(empty($user_level)){
             <input type="submit" value="Edit"><br>
             <input type="hidden" name="action" value="edit_course">
         </form>
+        </div>
     </main>    
 </body>
 <?php

@@ -13,13 +13,13 @@
 <body>
 
 <main>
+<div class="container">
 <?php
 if(isset($_SESSION['message']))
 {
   echo("<b>". $_SESSION['message']. "</b>");
 }
 ?>
-<div class="container">
   <form action="../login/index.php" method="post">
     <div class="form-group">
         <label for="userName" >User Name </label>

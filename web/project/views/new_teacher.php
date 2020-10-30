@@ -22,6 +22,7 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
+    <div class="container">
     <?php
         include '../modules/navbar.php';
         ?>
@@ -29,19 +30,22 @@ if(empty($user_level)){
     
         <form action="../teachers/index.php" method="POST">
 
-            
+        <div class="form-group">
             <label for="teacher_fname">First Name</label><br>
-            <input type="text" name="teacher_fname" id="teacher_fname" required><br>
-
+            <input type="text" class="form-control" name="teacher_fname" id="teacher_fname" required><br>
+            </div>
+            <div class="form-group">
             <label for="teacher_lname">Last Name</label><br>
-            <input type="text" name="teacher_lname" id="teacher_lname" required><br>
-            
+            <input type="text" class="form-control" name="teacher_lname" id="teacher_lname" required><br>
+            </div>
+            <div class="form-group">
             <label for="teacher_user_name">User Name</label><br>
-            <input type="text" name="teacher_user_name" id="teacher_user_name" required><br>
-            
+            <input type="text" class="form-control" name="teacher_user_name" id="teacher_user_name" required><br>
+            </div>
+            <div class="form-group">
             <label for="teacher_user_pass">Password</label><br>
-            <input type="password" name="teacher_user_pass" id="teacher_user_pass" required><br>
-
+            <input type="password" class="form-control" name="teacher_user_pass" id="teacher_user_pass" required><br>
+            </div>
             <input type="submit" value="Submit"><br>
             <input type="hidden" name="action" value="new_teacher">
         </form>

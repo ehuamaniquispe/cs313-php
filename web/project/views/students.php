@@ -22,6 +22,8 @@ if(empty($user_level)){
 </head>
 <body>
     <main>
+    <div class="container">
+
 
         <?php
         include '../modules/navbar.php';
@@ -40,6 +42,7 @@ if(empty($user_level)){
             echo($displayStudentsInfo)
             ?>
         </table>
+     </div>
     </main>    
 </body>
 <?php

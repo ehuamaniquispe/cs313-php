@@ -36,7 +36,7 @@ if(empty($user_level)){
     }
     ?>
     <br>
-    <a href="../students/index.php?action=newStudent">New Student </a>
+    <a class="btn btn-primary" href="../students/index.php?action=newStudent">New Student </a>
         <table class="table table-striped">
             <?php
             echo($displayStudentsInfo)

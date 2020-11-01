@@ -17,7 +17,7 @@ function displayStudentsInfo($students)
         $tableStudents .= "<td> $student[students_reg_num] </td>";
         $tableStudents .= "<td> $student[students_fname] </td>";
         $tableStudents .= "<td> $student[students_lname]</td>";
-        $tableStudents .= "<td>  <a href='../students/index.php?action=edit&student_id=$student[id_students]' title='edit'> EDIT </a> <a href='../students/index.php?action=delete&student_id=$student[id_students]' title='delete'> DELETE </a></td>";
+        $tableStudents .= "<td>  <a class='btn btn-warning' href='../students/index.php?action=edit&student_id=$student[id_students]' title='edit'> EDIT </a> <a class='btn btn-danger' href='../students/index.php?action=delete&student_id=$student[id_students]' title='delete'> DELETE </a></td>";
         $tableStudents .= '</tr>';
     }
     $tableStudents .= '</tbody>';
@@ -39,7 +39,7 @@ function displayTeachersInfo($teachers)
         $tableTeachers .= '<tr>';
         $tableTeachers .= "<td> $teacher[teachers_fname] </td>";
         $tableTeachers .= "<td> $teacher[teachers_lname]</td>";
-        $tableTeachers .= "<td>  <a href='../teachers/index.php?action=edit&teacher_id=$teacher[id_teachers]' title='edit'> EDIT </a> <a href='../teachers/index.php?action=delete&teacher_id=$teacher[id_teachers]' title='delete'> DELETE </a></td>";
+        $tableTeachers .= "<td>  <a  class='btn btn-warning' href='../teachers/index.php?action=edit&teacher_id=$teacher[id_teachers]' title='edit'> EDIT </a> <a class='btn btn-danger' href='../teachers/index.php?action=delete&teacher_id=$teacher[id_teachers]' title='delete'> DELETE </a></td>";
        
         // $tableTeachers .= "<td>  <a href='/doit/categoria/index.php?action=editar&personalCatId=$categoriaDato[personalCatId]' title='editar'> EDITAR </a> <a href='#' onclick='eliminarRegistroPermiso($categoriaDato[personalCatId],`/doit/categoria?action=eliminar&categoriaId`)'title='eliminar'> ELIMINAR </a></td>";
         $tableTeachers .= '</tr>';
@@ -65,7 +65,7 @@ function displayCoursesInfo($courses)
         $tableCourses .= "<td> $course[courses_name] </td>";
         $tableCourses .= "<td> $course[courses_section] </td>";
        
-        $tableCourses .= "<td> <a class='course-view' course_id='$course[id_courses]' title='view'> VIEW </a> <a href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
+        $tableCourses .= "<td> <a  class='course-view btn btn-info' course_id='$course[id_courses]' title='view'> VIEW </a> <a class='btn btn-warning' href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a class='btn btn-danger' href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
         // $tableCourses .= "<td> <a href='../courses/index.php?action=viewDetail&courseId=$course[id_courses]' title='view'> VIEW </a> <a href='../courses/index.php?action=edit&course_id=$course[id_courses]' title='edit'> EDIT </a> <a href='../courses/index.php?action=delete&course_id=$course[id_courses]' 'title='delete'> DELETE </a></td>";
       
         $tableCourses .= '</tr>';

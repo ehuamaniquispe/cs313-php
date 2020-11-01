@@ -34,7 +34,7 @@ if(empty($user_level)){
     }
     ?>
     <br>
-    <a href="../teachers/index.php?action=newTeacher"> New Teacher </a>
+    <a class="btn btn-primary" href="../teachers/index.php?action=newTeacher"> New Teacher </a>
     
         <table class="table table-striped">
             <?php
